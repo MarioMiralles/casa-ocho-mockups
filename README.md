@@ -9,7 +9,7 @@ working demo booking widget (calendar, guest count, price quote, "book direct" s
 | `index.html` | Gallery of all four concepts |
 | `deco/` | 1 · Deco Postcard: South Beach Art Deco, pastel, booking card as a vintage hotel postcard |
 | `calle-ocho/` | 2 · Calle Ocho: Little Havana heritage, Cuban tile patterns, EN/ES switch, neighborhood first |
-| `neon/` | 3 · Neon Nights: Miami after dark, neon accents, sticky app-style booking panel |
+| `neon/` | 3 · Sunset Drive: loud 80s Miami, neon script, synthwave sunset, pink and teal stripes |
 | `palm-house/` | 4 · Palm House: tropical boutique hotel, editorial chapters, slim booking bar |
 
 ## Notes
