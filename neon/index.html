@@ -1,0 +1,1081 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Casa Ocho · Bright days, neon nights in Little Havana</title>
+<meta name="description" content="A newly renovated 2 bedroom house near Calle Ocho in Little Havana, Miami. Private backyard and parking. Book direct.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230B0A1F'/%3E%3Cpath d='M6 20a10 10 0 0 1 20 0z' fill='%23FF2E93'/%3E%3Cpath d='M5 23h22M8 26h16' stroke='%232DE2FF' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400..900&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --night:#0B0A1F;
+  --deep:#13102F;
+  --tile:#19153D;
+  --line:rgba(196,178,255,.14);
+  --ink:#F5F1FF;
+  --muted:#B6AFDC;
+  --pink:#FF2E93;
+  --cyan:#2DE2FF;
+  --coral:#FF7A59;
+  --violet:#8B3CFF;
+  --amber:#FFC56E;
+  --sunset:linear-gradient(100deg,#FF8A5B 0%,#FF2E93 52%,#8B3CFF 100%);
+  --display:"Unbounded",system-ui,sans-serif;
+  --body:"Manrope",system-ui,sans-serif;
+  --nav-h:64px;
+  --sky-h:clamp(720px,100vh,960px);
+  --water:calc(var(--sky-h) * .26);
+  --dusk:.35;
+  --r:22px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{margin:0;background:var(--night);color:var(--ink);font:400 17px/1.6 var(--body);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body.lock{overflow:hidden}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+button{font:inherit;color:inherit}
+h1,h2,h3,h4{font-family:var(--display);margin:0;line-height:1.05;letter-spacing:-.01em}
+p{margin:0}
+:focus-visible{outline:2px solid var(--cyan);outline-offset:3px;border-radius:6px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip{position:absolute;left:16px;top:-60px;z-index:100;background:var(--cyan);color:var(--night);padding:10px 14px;border-radius:10px;font-weight:700;text-decoration:none}
+.skip:focus{top:12px}
+
+/* ---------- sky ---------- */
+.stage{position:relative}
+.sky{position:absolute;inset:0 0 auto 0;height:var(--sky-h);overflow:hidden;z-index:0;pointer-events:none}
+.sky-grad{position:absolute;inset:0;background:linear-gradient(180deg,#120E36 0%,#2C1566 26%,#7A2AA6 48%,#E0368F 62%,#FF6F6A 69%,#FFAA6E 74%,#FFAA6E 74.2%,#1A0F3F 74.2%)}
+.sky-night{position:absolute;inset:0 0 auto 0;height:74.2%;background:linear-gradient(180deg,#05041A 0%,#0C0A2C 42%,#24125A 70%,rgba(120,36,140,.7) 100%);opacity:calc(var(--dusk) * .9)}
+.stars{position:absolute;inset:0 0 auto 0;height:55%;opacity:calc(var(--dusk) * 1.1);background-image:radial-gradient(1.2px 1.2px at 12% 18%,#fff 50%,transparent 51%),radial-gradient(1px 1px at 27% 40%,#fff 50%,transparent 51%),radial-gradient(1.4px 1.4px at 44% 12%,#cfe 50%,transparent 51%),radial-gradient(1px 1px at 63% 30%,#fff 50%,transparent 51%),radial-gradient(1.2px 1.2px at 78% 9%,#fde 50%,transparent 51%),radial-gradient(1px 1px at 91% 36%,#fff 50%,transparent 51%),radial-gradient(1px 1px at 5% 52%,#fff 50%,transparent 51%),radial-gradient(1.2px 1.2px at 55% 55%,#fff 50%,transparent 51%);background-size:620px 420px}
+.sun-glow{position:absolute;left:54%;bottom:var(--water);width:900px;height:520px;transform:translate(-50%,50%);background:radial-gradient(closest-side,rgba(255,90,140,.55),rgba(255,46,147,.18) 55%,transparent);opacity:calc(1 - var(--dusk) * .55)}
+.sun-wrap{position:absolute;left:54%;bottom:var(--water);width:340px;height:190px;transform:translateX(-50%);overflow:hidden}
+.sun{position:absolute;left:0;top:20px;width:340px;height:340px;border-radius:50%;background:linear-gradient(180deg,#FFE08A 0%,#FF9A5C 34%,#FF4E86 62%,#E02A9A 100%);transform:translateY(calc(var(--dusk) * 110px))}
+.skyline{position:absolute;left:0;bottom:var(--water);width:100%;height:210px}
+.skyline .bldg{fill:#09071E}
+.skyline .wins{opacity:calc(.25 + var(--dusk) * .75)}
+.skyline .wc{fill:var(--cyan)}
+.skyline .wp{fill:var(--pink)}
+.skyline .ww{fill:var(--amber)}
+.water{position:absolute;left:0;right:0;bottom:0;height:var(--water);background:repeating-linear-gradient(180deg,rgba(255,255,255,.035) 0 1px,transparent 1px 7px),linear-gradient(180deg,#2A114F 0%,#150D36 45%,var(--night) 100%)}
+.reflect{position:absolute;left:54%;top:0;width:300px;height:70%;transform:translateX(-50%);background:repeating-linear-gradient(180deg,rgba(255,120,110,.85) 0 2px,transparent 2px 8px);-webkit-mask:radial-gradient(50% 100% at 50% 0,#000 20%,transparent 100%);mask:radial-gradient(50% 100% at 50% 0,#000 20%,transparent 100%);opacity:calc(1 - var(--dusk) * .6);animation:shimmer 5s ease-in-out infinite alternate}
+@keyframes shimmer{from{transform:translateX(-50%) scaleX(.86)}to{transform:translateX(-50%) scaleX(1.08)}}
+
+/* ---------- nav ---------- */
+.nav{position:sticky;top:0;z-index:40;height:var(--nav-h);transition:background .3s,border-color .3s;border-bottom:1px solid transparent}
+.nav.scrolled{background:rgba(11,10,31,.72);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border-color:var(--line)}
+.nav-in{max-width:1360px;margin:0 auto;height:100%;padding:0 32px;display:flex;align-items:center;gap:28px}
+.brand{font:800 18px/1 var(--display);letter-spacing:.06em;text-decoration:none;display:flex;align-items:center;gap:10px;text-transform:uppercase}
+.brand svg{width:26px;height:26px}
+.nav-in nav{margin-left:auto}
+.nav-links{display:flex;gap:4px;list-style:none;padding:0;margin-block:0}
+.nav-links a{display:block;padding:8px 12px;border-radius:999px;font-size:14px;font-weight:600;color:var(--muted);text-decoration:none;transition:color .2s,background .2s}
+.nav-links a:hover{color:var(--ink);background:rgba(255,255,255,.06)}
+.nav-cta{display:none}
+
+/* ---------- buttons ---------- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 26px;border-radius:999px;border:0;cursor:pointer;font-weight:800;font-size:16px;text-decoration:none;transition:transform .2s,box-shadow .2s,background .2s}
+.btn-hot{background:var(--sunset);color:#14061F;box-shadow:0 0 0 1px rgba(255,255,255,.15) inset,0 10px 34px -8px rgba(255,46,147,.7)}
+.btn-hot:hover{transform:translateY(-2px);box-shadow:0 0 0 1px rgba(255,255,255,.25) inset,0 14px 40px -6px rgba(255,46,147,.9)}
+.btn-ghost{background:rgba(255,255,255,.06);color:var(--ink);box-shadow:0 0 0 1px rgba(45,226,255,.45) inset}
+.btn-ghost:hover{background:rgba(45,226,255,.12)}
+.btn-sm{min-height:40px;padding:0 18px;font-size:14px}
+
+/* ---------- layout ---------- */
+.layout{position:relative;z-index:1;max-width:1360px;margin:0 auto;padding:0 32px;display:grid;grid-template-columns:minmax(0,1fr) 380px;gap:0 48px}
+main{min-width:0}
+
+/* ---------- hero ---------- */
+.hero-top{min-height:calc(var(--sky-h) * .742 - var(--nav-h) + 26px);padding:clamp(28px,6vh,64px) 0 40px}
+.eyebrow{font:700 12px/1.4 var(--body);letter-spacing:.2em;text-transform:uppercase;color:var(--cyan)}
+.hero h1{font-size:clamp(2.1rem,6.1vw,5.2rem);font-weight:800;line-height:.98;margin:18px 0 26px;letter-spacing:-.02em}
+.hero h1 span{display:block}
+.neon{color:#FFE6F3;text-shadow:0 0 4px #ff9ccc,0 0 14px var(--pink),0 0 34px var(--pink),0 0 70px rgba(255,46,147,.6)}
+.js .hero h1 .neon{animation:flicker 2.2s .5s both}
+@keyframes flicker{0%{opacity:.15;text-shadow:none}8%{opacity:1}10%{opacity:.25;text-shadow:none}16%{opacity:1}19%{opacity:.4}24%,100%{opacity:1}}
+.lede{max-width:560px;font-size:clamp(1rem,1.3vw,1.15rem);color:#E3DDFA}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.facts{display:flex;flex-wrap:wrap;gap:8px;margin:26px 0 0;padding:0;list-style:none}
+.facts li{font-size:13px;font-weight:700;padding:7px 12px;border-radius:999px;background:rgba(11,10,31,.45);box-shadow:0 0 0 1px var(--line) inset;-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
+.facts li b{color:var(--amber)}
+.hero-photo{position:relative;display:block;width:100%;padding:3px;border:0;border-radius:30px;background:var(--sunset);cursor:zoom-in;box-shadow:0 0 50px rgba(255,46,147,.45),0 0 140px rgba(139,60,255,.35)}
+.hero-photo img{width:100%;aspect-ratio:3/2;object-fit:cover;border-radius:27px}
+.chip{position:absolute;display:inline-flex;align-items:center;gap:8px;padding:9px 14px;border-radius:999px;font-size:13px;font-weight:700;background:rgba(11,10,31,.62);color:var(--ink);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);box-shadow:0 0 0 1px rgba(255,255,255,.14) inset}
+.chip svg{width:14px;height:14px;color:var(--amber)}
+.hero-photo .c1{left:18px;bottom:18px}
+.hero-photo .c2{right:18px;top:18px}
+
+/* ---------- sections ---------- */
+.sec{padding-top:clamp(84px,10vw,130px)}
+.sec-head{margin-bottom:34px;max-width:640px}
+.sec-head h2{font-size:clamp(1.8rem,3.4vw,3rem);font-weight:700;margin-top:14px}
+.sec-head p{margin-top:16px;color:var(--muted)}
+
+/* bento: the house */
+.bento{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:170px;gap:12px}
+.shot{position:relative;padding:0;border:0;border-radius:var(--r);overflow:hidden;cursor:zoom-in;background:var(--tile)}
+.shot img{width:100%;height:100%;object-fit:cover;transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+.shot::after{content:"";position:absolute;inset:0;border-radius:inherit;box-shadow:0 0 0 1px rgba(255,255,255,.08) inset;transition:box-shadow .3s}
+.shot:hover img{transform:scale(1.04)}
+.shot:hover::after,.shot:focus-visible::after{box-shadow:0 0 0 2px var(--cyan) inset,0 0 30px rgba(45,226,255,.4) inset}
+.shot .chip{left:12px;bottom:12px;font-size:12px;padding:7px 12px}
+.b-living{grid-column:span 2;grid-row:span 2}
+.b-kitchen{grid-column:span 2}
+.b-bed1{grid-column:span 2}
+.b-bed2{grid-column:span 2}
+.b-yard{grid-column:span 3}
+.tile{border-radius:var(--r);padding:22px;background:var(--tile);box-shadow:0 0 0 1px var(--line) inset;display:flex;flex-direction:column;justify-content:space-between;min-width:0}
+.t-sleeps{grid-row:span 1;background:linear-gradient(160deg,#25145A,#16123A)}
+.t-sleeps .big{font:800 44px/1 var(--display);color:var(--ink)}
+.t-sleeps .big small{display:block;font:700 11px/1.4 var(--body);letter-spacing:.18em;text-transform:uppercase;color:var(--cyan);margin-bottom:6px}
+.t-sleeps ul{margin:0;padding:0;list-style:none;font-size:13px;color:var(--muted);line-height:1.5}
+.t-note{background:var(--sunset);color:#16061F}
+.t-note p{font:700 16px/1.35 var(--display)}
+.t-note span{font-size:13px;font-weight:700;opacity:.85}
+.space-list{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:12px}
+.space-list div{padding:18px 20px;border-radius:18px;box-shadow:0 0 0 1px var(--line) inset}
+.space-list dt{font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.space-list dd{margin:6px 0 0;font:600 17px/1.3 var(--display)}
+
+/* bento: amenities */
+.amen{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;grid-auto-rows:minmax(150px,auto)}
+.am{position:relative;border-radius:var(--r);padding:22px;background:var(--tile);box-shadow:0 0 0 1px var(--line) inset;display:flex;flex-direction:column;gap:10px;overflow:hidden}
+.am svg{width:30px;height:30px;color:var(--cyan);flex:none}
+.am h3{font-size:17px;font-weight:700;line-height:1.2}
+.am p{font-size:14px;color:var(--muted);line-height:1.5}
+.am-yard{grid-column:span 2;grid-row:span 2;justify-content:flex-end;background:radial-gradient(120% 90% at 85% 0%,rgba(255,122,89,.55),transparent 55%),radial-gradient(90% 80% at 0% 100%,rgba(139,60,255,.45),transparent 60%),var(--tile)}
+.am-yard svg{width:44px;height:44px;color:var(--amber);margin-bottom:auto}
+.am-yard h3{font-size:clamp(1.4rem,2.2vw,2rem)}
+.am-yard p{font-size:15px;color:#E3DDFA;max-width:34ch}
+.lights{position:absolute;top:22px;right:22px;left:40%;height:30px}
+.lights i{position:absolute;top:0;width:8px;height:8px;border-radius:50%;background:var(--amber);box-shadow:0 0 10px var(--amber),0 0 22px rgba(255,197,110,.7)}
+.am-wide{grid-column:span 2}
+.am-link{text-decoration:none;background:linear-gradient(135deg,#0F2A44,#16123A);box-shadow:0 0 0 1px rgba(45,226,255,.35) inset}
+.am-link:hover{box-shadow:0 0 0 1px var(--cyan) inset,0 0 28px rgba(45,226,255,.25)}
+.am-link .go{margin-top:auto;font-weight:800;font-size:14px;color:var(--cyan)}
+
+/* Miami night */
+.night-wrap{border-radius:32px;padding:clamp(26px,4vw,48px);background:radial-gradient(80% 60% at 100% 0%,rgba(255,46,147,.18),transparent 60%),radial-gradient(60% 50% at 0% 100%,rgba(45,226,255,.12),transparent 60%),#0E0C27;box-shadow:0 0 0 1px var(--line) inset}
+.spots{list-style:none;margin:0;padding:0}
+.spot{display:grid;grid-template-columns:minmax(220px,auto) 1fr;gap:12px 36px;align-items:center;padding:28px 0;border-top:1px solid var(--line)}
+.spot:first-child{border-top:0;padding-top:6px}
+.num{font:800 clamp(4rem,8.4vw,7.2rem)/.9 var(--display);letter-spacing:-.04em;display:flex;align-items:flex-start;gap:6px}
+.num .pre{font:700 13px/1 var(--body);letter-spacing:.14em;text-transform:uppercase;margin-top:10px;writing-mode:vertical-rl;transform:rotate(180deg)}
+.num .unit{font:700 13px/1.2 var(--body);letter-spacing:.14em;text-transform:uppercase;align-self:flex-end;margin-bottom:10px;color:var(--muted)}
+.g-cyan{color:#DFFBFF;text-shadow:0 0 6px var(--cyan),0 0 22px var(--cyan),0 0 54px rgba(45,226,255,.55)}
+.g-pink{color:#FFE6F3;text-shadow:0 0 6px var(--pink),0 0 22px var(--pink),0 0 54px rgba(255,46,147,.55)}
+.g-coral{color:#FFEDE5;text-shadow:0 0 6px var(--coral),0 0 22px var(--coral),0 0 54px rgba(255,122,89,.55)}
+.spot h3{font-size:clamp(1.3rem,2vw,1.7rem);font-weight:700}
+.spot p{margin-top:8px;color:var(--muted);max-width:46ch}
+.more{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:20px}
+.more div{padding:16px;border-radius:16px;background:rgba(255,255,255,.04);box-shadow:0 0 0 1px var(--line) inset}
+.more b{display:block;font:800 22px/1 var(--display);color:var(--ink)}
+.more b small{font:700 11px var(--body);letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-left:4px}
+.more span{display:block;margin-top:8px;font-size:13px;font-weight:600;color:var(--muted)}
+.fine{margin-top:16px;font-size:12px;color:var(--muted)}
+
+/* reviews */
+.score{display:grid;gap:40px}
+.score-top{display:flex;flex-wrap:wrap;align-items:flex-end;gap:20px 36px}
+.big-score{font:800 clamp(6rem,17vw,13rem)/.82 var(--display);letter-spacing:-.05em;background:linear-gradient(180deg,#FFD9A0 0%,#FF7A8A 45%,#FF2E93 70%,#8B3CFF 100%);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 0 18px rgba(255,46,147,.55)) drop-shadow(0 0 50px rgba(139,60,255,.4))}
+.score-meta{margin:0 0 4px;font-weight:700}
+.score-meta span{color:var(--muted);font-weight:600}
+.badges{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.badge{font-size:12px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;padding:7px 12px;border-radius:999px;box-shadow:0 0 0 1px rgba(255,197,110,.5) inset;color:var(--amber)}
+.bars{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:18px 44px}
+.bars li{display:grid;grid-template-columns:130px 1fr 40px;gap:14px;align-items:center;font-size:14px;font-weight:700}
+.bars .track{height:8px;border-radius:99px;background:rgba(255,255,255,.08);overflow:hidden}
+.bars .track i{display:block;height:100%;width:var(--v);border-radius:inherit;background:linear-gradient(90deg,var(--cyan),var(--pink));box-shadow:0 0 12px rgba(255,46,147,.6)}
+.js .bars .track i{width:0;transition:width 1.4s cubic-bezier(.2,.7,.2,1)}
+.js .bars.in .track i{width:var(--v)}
+.js .bars.in li:nth-child(2) i{transition-delay:.08s}.js .bars.in li:nth-child(3) i{transition-delay:.16s}.js .bars.in li:nth-child(4) i{transition-delay:.24s}.js .bars.in li:nth-child(5) i{transition-delay:.32s}.js .bars.in li:nth-child(6) i{transition-delay:.4s}
+.bars output{text-align:right;font-family:var(--display);font-weight:500}
+.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:44px}
+.quote{margin:0;padding:24px;border-radius:var(--r);background:var(--tile);box-shadow:0 0 0 1px var(--line) inset;display:flex;flex-direction:column;gap:16px}
+.quote blockquote{margin:0;font-size:15px;line-height:1.6}
+.quote figcaption{margin-top:auto;font-size:13px;font-weight:700;color:var(--muted)}
+
+/* host */
+.host{display:grid;grid-template-columns:auto 1fr;gap:28px 40px;align-items:center;padding:clamp(24px,4vw,40px);border-radius:32px;background:var(--deep);box-shadow:0 0 0 1px var(--line) inset}
+.mono{width:150px;height:150px;border-radius:50%;padding:4px;background:conic-gradient(from 200deg,var(--cyan),var(--pink),var(--coral),var(--violet),var(--cyan));box-shadow:0 0 40px rgba(255,46,147,.45)}
+.mono span{display:grid;place-items:center;width:100%;height:100%;border-radius:50%;background:var(--night);font:800 64px/1 var(--display)}
+.host h2{font-size:clamp(1.6rem,2.8vw,2.4rem);font-weight:700;margin:10px 0 12px}
+.host p.bio{color:var(--muted)}
+.host-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:22px 0;padding:0;list-style:none}
+.host-stats li{padding:14px;border-radius:14px;background:rgba(255,255,255,.04);box-shadow:0 0 0 1px var(--line) inset;font-size:12px;font-weight:600;color:var(--muted)}
+.host-stats b{display:block;font:700 18px/1.15 var(--display);color:var(--ink);margin-bottom:4px}
+
+/* good to know */
+.know{display:grid;grid-template-columns:1fr 1.25fr;gap:12px}
+.times{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.time{padding:22px;border-radius:var(--r);background:var(--tile);box-shadow:0 0 0 1px var(--line) inset}
+.time span{font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.time b{display:block;margin-top:8px;font:700 26px/1 var(--display)}
+.rules{margin-top:12px;padding:22px;border-radius:var(--r);background:var(--tile);box-shadow:0 0 0 1px var(--line) inset}
+.rules h3,.faq h3{font-size:16px;font-weight:700;margin-bottom:12px}
+.rules ul{margin:0;padding-left:18px;color:var(--muted);font-size:15px;line-height:1.9}
+.rules p{margin-top:14px;font-size:14px;color:var(--muted)}
+.faq{padding:22px;border-radius:var(--r);background:var(--tile);box-shadow:0 0 0 1px var(--line) inset}
+.faq details{border-top:1px solid var(--line)}
+.faq details:first-of-type{border-top:0}
+.faq summary{list-style:none;cursor:pointer;padding:16px 34px 16px 0;font-weight:700;position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"";position:absolute;right:6px;top:50%;width:10px;height:10px;border-right:2px solid var(--cyan);border-bottom:2px solid var(--cyan);transform:translateY(-70%) rotate(45deg);transition:transform .25s}
+.faq details[open] summary::after{transform:translateY(-30%) rotate(-135deg)}
+.faq details p{padding:0 0 18px;color:var(--muted);font-size:15px}
+
+/* footer */
+.foot{margin-top:clamp(90px,10vw,140px);border-top:1px solid var(--line);background:linear-gradient(180deg,transparent,rgba(139,60,255,.12))}
+.foot-in{max-width:1360px;margin:0 auto;padding:48px 32px 56px;display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:32px;align-items:end}
+.foot .tag{font:800 clamp(1.6rem,3vw,2.6rem)/1 var(--display);margin-top:14px}
+.foot ul{list-style:none;margin:0;padding:0;font-size:15px;line-height:2;color:var(--muted)}
+.foot .meta{text-align:right;font-size:14px;color:var(--muted)}
+.foot .meta a{color:var(--cyan);font-weight:700}
+
+/* ---------- booking panel ---------- */
+.book{position:sticky;top:calc(var(--nav-h) + 20px);align-self:start;margin-top:clamp(28px,6vh,64px);z-index:30}
+.panel{position:relative;border-radius:28px;padding:24px;background:rgba(22,17,58,.58);-webkit-backdrop-filter:blur(22px) saturate(150%);backdrop-filter:blur(22px) saturate(150%);box-shadow:0 0 0 1px rgba(255,46,147,.45) inset,0 0 0 1px rgba(45,226,255,.12),0 0 46px -6px rgba(255,46,147,.45),0 30px 80px -30px rgba(0,0,0,.8)}
+.sheet-head{display:none}
+.p-top{display:flex;justify-content:space-between;align-items:flex-end;gap:12px}
+.p-price{font:700 26px/1 var(--display)}
+.p-price small{font:600 14px var(--body);color:var(--muted)}
+.p-price .from{display:block;font:700 11px/1 var(--body);letter-spacing:.16em;text-transform:uppercase;color:var(--cyan);margin-bottom:8px}
+.p-rate{font-size:13px;font-weight:700;display:flex;align-items:center;gap:6px}
+.p-rate svg{width:14px;height:14px;color:var(--amber)}
+.dates{display:grid;grid-template-columns:1fr 1fr;margin-top:18px;border-radius:16px;box-shadow:0 0 0 1px rgba(255,255,255,.16) inset;overflow:hidden}
+.dates button{background:rgba(255,255,255,.03);border:0;padding:12px 14px;text-align:left;cursor:pointer;transition:background .2s}
+.dates button+button{box-shadow:1px 0 0 rgba(255,255,255,.16) inset}
+.dates button:hover{background:rgba(255,255,255,.07)}
+.dates button.active{background:rgba(45,226,255,.1);box-shadow:0 0 0 2px var(--cyan) inset}
+.dates span{display:block;font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.dates b{display:block;margin-top:3px;font-size:15px}
+.dates b.empty{color:var(--muted);font-weight:600}
+.guests{display:flex;align-items:center;justify-content:space-between;margin-top:10px;padding:10px 10px 10px 14px;border-radius:16px;box-shadow:0 0 0 1px rgba(255,255,255,.16) inset}
+.guests span{font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.guests b{display:block;font-size:15px}
+.stepper{display:flex;align-items:center;gap:10px}
+.stepper button{width:36px;height:36px;border-radius:50%;border:0;background:rgba(255,255,255,.07);box-shadow:0 0 0 1px rgba(255,255,255,.18) inset;cursor:pointer;font-size:20px;line-height:1;display:grid;place-items:center}
+.stepper button:hover:not(:disabled){box-shadow:0 0 0 1px var(--cyan) inset;color:var(--cyan)}
+.stepper button:disabled{opacity:.35;cursor:not-allowed}
+.stepper output{min-width:16px;text-align:center;font-weight:800}
+.hint{min-height:20px;margin-top:12px;font-size:13px;font-weight:600;color:var(--cyan)}
+.quote-box{margin-top:6px}
+.quote-box .empty-q{font-size:14px;color:var(--muted);padding:12px 0 4px}
+.lines{margin:0;padding:6px 0 0;list-style:none;font-size:14px}
+.lines li{display:flex;justify-content:space-between;gap:12px;padding:5px 0;color:#DCD6F5}
+.lines li.total{margin-top:6px;padding-top:12px;border-top:1px solid rgba(255,255,255,.14);font-weight:800;font-size:16px;color:var(--ink)}
+.save{margin-top:12px;padding:10px 12px;border-radius:12px;background:rgba(45,226,255,.08);box-shadow:0 0 0 1px rgba(45,226,255,.3) inset;font-size:13px;font-weight:700;color:#CFF8FF}
+.save b{color:var(--cyan)}
+.req{width:100%;margin-top:16px}
+.small{margin-top:12px;font-size:11.5px;line-height:1.5;color:var(--muted)}
+.done{display:none;text-align:left}
+.panel.is-done .form{display:none}
+.panel.is-done .done{display:block}
+.done .ok{width:56px;height:56px;border-radius:50%;display:grid;place-items:center;background:rgba(45,226,255,.12);box-shadow:0 0 0 1px var(--cyan) inset,0 0 26px rgba(45,226,255,.5);color:var(--cyan)}
+.done .ok svg{width:26px;height:26px}
+.done h3{font-size:22px;margin:18px 0 10px}
+.done p{font-size:14px;color:var(--muted)}
+.done .sum{margin:16px 0;padding:14px;border-radius:14px;background:rgba(255,255,255,.05);font-size:14px;font-weight:700;line-height:1.7}
+
+/* calendar */
+.cal{display:none;position:absolute;top:84px;right:calc(100% + 16px);width:620px;padding:22px;border-radius:24px;background:rgba(18,14,48,.86);-webkit-backdrop-filter:blur(22px);backdrop-filter:blur(22px);box-shadow:0 0 0 1px rgba(45,226,255,.4) inset,0 0 40px -8px rgba(45,226,255,.35),0 30px 80px -20px rgba(0,0,0,.85)}
+.cal.open{display:block;animation:pop .22s ease-out}
+@keyframes pop{from{opacity:0;transform:translateX(10px)}to{opacity:1;transform:none}}
+.cal-nav{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}
+.cal-nav button{width:38px;height:38px;border-radius:50%;border:0;background:rgba(255,255,255,.07);cursor:pointer;display:grid;place-items:center}
+.cal-nav button:hover:not(:disabled){color:var(--cyan);box-shadow:0 0 0 1px var(--cyan) inset}
+.cal-nav button:disabled{opacity:.3;cursor:not-allowed}
+.cal-nav svg{width:16px;height:16px}
+.months{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.month h4{font:600 15px/1 var(--display);text-align:center;margin:-30px 0 18px;pointer-events:none}
+.dow,.days{display:grid;grid-template-columns:repeat(7,1fr);gap:3px 0}
+.dow span{font-size:11px;font-weight:800;color:var(--muted);text-align:center;padding-bottom:6px}
+.day{position:relative;height:38px;border:0;background:none;cursor:pointer;font-size:14px;font-weight:700;border-radius:10px}
+.day:hover:not(:disabled){box-shadow:0 0 0 1px var(--cyan) inset}
+.day:disabled{cursor:not-allowed;color:rgba(182,175,220,.35)}
+.day.booked{text-decoration:line-through;text-decoration-color:var(--pink);text-decoration-thickness:2px;color:rgba(182,175,220,.55)}
+.day.co{text-decoration:none;color:var(--ink)}
+.day.in{background:rgba(255,46,147,.16);border-radius:0}
+.day.s,.day.e{background:var(--sunset);color:#16061F;box-shadow:0 0 18px rgba(255,46,147,.6)}
+.day.s{border-radius:10px 0 0 10px}.day.e{border-radius:0 10px 10px 0}
+.day.s.only{border-radius:10px}
+.day.today::after{content:"";position:absolute;left:50%;bottom:5px;width:4px;height:4px;margin-left:-2px;border-radius:50%;background:var(--cyan)}
+.cal-foot{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:16px;padding-top:14px;border-top:1px solid var(--line);font-size:12px;color:var(--muted)}
+.legend{display:flex;gap:14px;flex-wrap:wrap}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:6px;vertical-align:-1px}
+.lg-sel{background:var(--pink)}.lg-bk{background:none;box-shadow:0 0 0 1px var(--pink) inset}
+.cal-foot button{background:none;border:0;color:var(--cyan);font-weight:800;cursor:pointer;font-size:14px;padding:6px 4px}
+
+/* mobile bar */
+.mbar{display:none}
+
+/* lightbox */
+.lb{position:fixed;inset:0;z-index:80;display:none;align-items:center;justify-content:center;background:rgba(6,5,18,.94);padding:24px}
+.lb.open{display:flex}
+.lb figure{margin:0;max-width:min(1200px,100%);text-align:center}
+.lb img{max-height:80vh;width:auto;margin:0 auto;border-radius:18px;box-shadow:0 0 60px rgba(255,46,147,.35)}
+.lb figcaption{margin-top:14px;font-weight:700;color:var(--muted)}
+.lb-btn{position:absolute;width:52px;height:52px;border-radius:50%;border:0;cursor:pointer;background:rgba(255,255,255,.08);box-shadow:0 0 0 1px rgba(255,255,255,.2) inset;display:grid;place-items:center}
+.lb-btn:hover{box-shadow:0 0 0 1px var(--cyan) inset;color:var(--cyan)}
+.lb-btn svg{width:20px;height:20px}
+.lb-close{top:20px;right:20px}.lb-prev{left:20px;top:50%;margin-top:-26px}.lb-next{right:20px;top:50%;margin-top:-26px}
+
+/* reveal */
+.js .reveal{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}
+.js .reveal.in{opacity:1;transform:none}
+
+/* ---------- responsive ---------- */
+@media (max-width:1279px){
+  .layout{grid-template-columns:minmax(0,1fr) 352px;gap:0 32px}
+  .nav-links a{padding:8px 9px}
+  .more{grid-template-columns:repeat(3,1fr)}
+  .host-stats{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:1079px){
+  :root{--sky-h:clamp(640px,96vh,820px)}
+  .nav-links{display:none}
+  .nav-cta{display:inline-flex;margin-left:auto}
+  .layout{display:block;padding:0 24px}
+  .sun-glow,.sun-wrap,.reflect{left:50%}
+  .book{position:fixed;inset:0;margin:0;z-index:70;overflow-y:auto;background:var(--night);visibility:hidden;transform:translateY(100%);transition:transform .35s cubic-bezier(.2,.7,.2,1),visibility 0s .35s}
+  .book.open{visibility:visible;transform:none;transition:transform .35s cubic-bezier(.2,.7,.2,1)}
+  .panel{border-radius:0;min-height:100%;padding:0 20px 32px;background:radial-gradient(90% 40% at 50% 0%,rgba(255,46,147,.18),transparent 70%),var(--night);box-shadow:none;-webkit-backdrop-filter:none;backdrop-filter:none}
+  .sheet-head{display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:2;margin:0 -20px 16px;padding:14px 20px;background:rgba(11,10,31,.9);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .sheet-head h2{font-size:16px;font-weight:700}
+  .sheet-head button{width:42px;height:42px;border-radius:50%;border:0;background:rgba(255,255,255,.08);cursor:pointer;display:grid;place-items:center}
+  .sheet-head svg{width:18px;height:18px}
+  .cal{display:block;position:static;width:auto;margin-top:14px;padding:16px;border-radius:20px;animation:none}
+  .months{grid-template-columns:1fr}
+  .cal-foot button{display:none}
+  .mbar{display:flex;position:fixed;left:12px;right:12px;bottom:12px;z-index:60;align-items:center;justify-content:space-between;gap:12px;padding:10px 10px 10px 18px;border-radius:999px;background:rgba(22,17,58,.78);-webkit-backdrop-filter:blur(18px);backdrop-filter:blur(18px);box-shadow:0 0 0 1px rgba(255,46,147,.5) inset,0 0 30px -4px rgba(255,46,147,.5),0 16px 40px -10px rgba(0,0,0,.8)}
+  .mbar p{font-size:13px;font-weight:600;color:var(--muted);line-height:1.3}
+  .mbar p b{display:block;font:700 16px/1.2 var(--display);color:var(--ink)}
+  body{padding-bottom:96px}
+  .foot-in{grid-template-columns:1fr 1fr}
+  .foot .meta{text-align:left}
+}
+@media (max-width:760px){
+  :root{--r:18px}
+  body{font-size:16px}
+  .nav-in{padding:0 16px;gap:12px}
+  .layout{padding:0 16px}
+  .brand{font-size:15px}
+  .hero h1{margin:14px 0 18px}
+  .sun-wrap{width:220px;height:124px}
+  .sun{width:220px;height:220px;top:14px}
+  .sun-glow{width:560px;height:360px}
+  .reflect{width:200px}
+  .skyline{height:130px}
+  .hero-photo{border-radius:22px}
+  .hero-photo img{border-radius:19px}
+  .hero-photo .c2{display:none}
+  .hero-photo .c1{left:10px;bottom:10px}
+  .bento{grid-template-columns:1fr 1fr;grid-auto-rows:130px;gap:8px;grid-auto-flow:dense}
+  .b-living{grid-column:span 2;grid-row:span 2}
+  .b-kitchen,.b-bed1,.b-bed2,.b-yard{grid-column:span 2}
+  .t-note{grid-column:span 2}
+  .t-sleeps{padding:16px}
+  .t-sleeps .big{font-size:34px}
+  .space-list{grid-template-columns:1fr}
+  .amen{grid-template-columns:1fr 1fr;gap:8px}
+  .am{padding:18px}
+  .am-yard{grid-row:span 1;min-height:260px}
+  .am-yard,.am-wide{grid-column:span 2}
+  .spot{grid-template-columns:1fr;padding:22px 0}
+  .more{grid-template-columns:1fr 1fr}
+  .bars{grid-template-columns:1fr}
+  .bars li{grid-template-columns:104px 1fr 34px;gap:10px;font-size:13px}
+  .quotes{grid-template-columns:1fr}
+  .host{grid-template-columns:1fr}
+  .mono{width:110px;height:110px}
+  .mono span{font-size:46px}
+  .know{grid-template-columns:1fr}
+  .times{grid-template-columns:1fr 1fr}
+  .time b{font-size:20px}
+  .foot-in{grid-template-columns:1fr;padding:40px 16px 48px}
+  .lb{padding:12px}
+  .lb-prev,.lb-next{top:auto;bottom:20px;margin:0}
+  .lb-prev{left:calc(50% - 64px)}.lb-next{right:calc(50% - 64px)}
+}
+@media (max-width:420px){
+  .lb-btn{width:46px;height:46px}
+  .day{height:42px}
+  .host-stats{grid-template-columns:1fr 1fr}
+}
+@media (min-width:1080px) and (max-height:820px){
+  .panel{padding:20px}
+  .dates{margin-top:14px}
+  .hint{margin-top:8px}
+  .small{margin-top:8px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .js .reveal{opacity:1;transform:none}
+  .js .bars .track i{width:var(--v)}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-star" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></symbol>
+    <symbol id="i-left" viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-right" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></symbol>
+  </defs>
+</svg>
+
+<div class="stage">
+  <div class="sky" aria-hidden="true">
+    <div class="sky-grad"></div>
+    <div class="sky-night"></div>
+    <div class="stars"></div>
+    <div class="sun-glow"></div>
+    <div class="sun-wrap"><div class="sun"></div></div>
+    <svg class="skyline" viewBox="0 0 1440 220" preserveAspectRatio="xMidYMax slice" aria-hidden="true" focusable="false"><path class="bldg" d="M0 220V134H26V220ZM26 220V170H102V220ZM107 220V184H182V220ZM182 220V154H220V220ZM228 220V165H265V220ZM265 220V167H334V220ZM345 220V121H397V220ZM402 220V120H447V220ZM454 220V97H516V220ZM468 97V79H502V97ZM484 79V50H486V79ZM516 220V91H579V220ZM530 91V69H565V91ZM579 220V90H655V220ZM596 90V80H638V90ZM655 220V82H727V220ZM727 220V66H793V220ZM742 66V52H778V66ZM793 220V15H834V220ZM802 15V-5H825V15ZM812.5 -5V-29H814.5V-5ZM843 220V47H922V220ZM861 47V29H904V47ZM922 220V20H950V220ZM929 20V1H944V20ZM950 220V84H1010V220ZM964 84V65H997V84ZM979.5 65V40H981.5V65ZM1014 220V54H1096V220ZM1033 54V36H1078V54ZM1054.5 36V17H1056.5V36ZM1096 220V27H1158V220ZM1110 27V10H1144V27ZM1158 220V95H1215V220ZM1171 95V77H1202V95ZM1215 220V112H1273V220ZM1273 220V106H1323V220ZM1323 220V135H1365V220ZM1365 220V158H1430V220Z"/><g class="wins"><path class="wc" d="M112 192h3v4h-3zM133 201h3v4h-3zM187 171h3v4h-3zM291 184h3v4h-3zM298 184h3v4h-3zM305 184h3v4h-3zM326 184h3v4h-3zM298 202h3v4h-3zM312 202h3v4h-3zM305 211h3v4h-3zM357 201h3v4h-3zM385 201h3v4h-3zM364 210h3v4h-3zM414 137h3v4h-3zM435 173h3v4h-3zM421 182h3v4h-3zM428 191h3v4h-3zM428 200h3v4h-3zM435 200h3v4h-3zM459 105h3v4h-3zM508 105h3v4h-3zM480 114h3v4h-3zM501 123h3v4h-3zM480 159h3v4h-3zM501 186h3v4h-3zM501 195h3v4h-3zM508 204h3v4h-3zM528 99h3v4h-3zM535 180h3v4h-3zM535 189h3v4h-3zM570 207h3v4h-3zM612 98h3v4h-3zM633 107h3v4h-3zM640 107h3v4h-3zM647 161h3v4h-3zM598 179h3v4h-3zM626 179h3v4h-3zM619 188h3v4h-3zM702 90h3v4h-3zM660 108h3v4h-3zM667 108h3v4h-3zM688 108h3v4h-3zM695 126h3v4h-3zM716 126h3v4h-3zM660 135h3v4h-3zM716 162h3v4h-3zM660 171h3v4h-3zM681 180h3v4h-3zM681 189h3v4h-3zM732 137h3v4h-3zM760 137h3v4h-3zM753 209h3v4h-3zM812 68h3v4h-3zM798 77h3v4h-3zM819 158h3v4h-3zM826 167h3v4h-3zM812 185h3v4h-3zM883 55h3v4h-3zM897 64h3v4h-3zM862 91h3v4h-3zM855 100h3v4h-3zM855 109h3v4h-3zM904 109h3v4h-3zM855 118h3v4h-3zM848 127h3v4h-3zM883 127h3v4h-3zM855 136h3v4h-3zM862 136h3v4h-3zM890 145h3v4h-3zM911 163h3v4h-3zM862 208h3v4h-3zM962 101h3v4h-3zM997 128h3v4h-3zM997 173h3v4h-3zM1040 62h3v4h-3zM1075 71h3v4h-3zM1054 125h3v4h-3zM1089 125h3v4h-3zM1047 143h3v4h-3zM1068 152h3v4h-3zM1026 161h3v4h-3zM1026 188h3v4h-3zM1068 188h3v4h-3zM1075 188h3v4h-3zM1089 188h3v4h-3zM1026 197h3v4h-3zM1061 197h3v4h-3zM1082 197h3v4h-3zM1101 35h3v4h-3zM1115 35h3v4h-3zM1129 44h3v4h-3zM1129 53h3v4h-3zM1143 62h3v4h-3zM1143 98h3v4h-3zM1122 125h3v4h-3zM1143 125h3v4h-3zM1115 134h3v4h-3zM1143 134h3v4h-3zM1101 161h3v4h-3zM1129 170h3v4h-3zM1136 188h3v4h-3zM1150 188h3v4h-3zM1163 103h3v4h-3zM1177 112h3v4h-3zM1191 130h3v4h-3zM1170 157h3v4h-3zM1191 193h3v4h-3zM1227 156h3v4h-3zM1255 210h3v4h-3zM1299 114h3v4h-3zM1299 132h3v4h-3zM1292 159h3v4h-3zM1313 186h3v4h-3zM1299 204h3v4h-3zM1349 170h3v4h-3zM1349 179h3v4h-3zM1391 166h3v4h-3z"/><path class="wp" d="M80 178h3v4h-3zM126 201h3v4h-3zM247 209h3v4h-3zM326 193h3v4h-3zM319 211h3v4h-3zM364 156h3v4h-3zM364 165h3v4h-3zM385 192h3v4h-3zM435 137h3v4h-3zM414 200h3v4h-3zM459 114h3v4h-3zM473 159h3v4h-3zM508 186h3v4h-3zM542 135h3v4h-3zM528 144h3v4h-3zM556 162h3v4h-3zM570 162h3v4h-3zM528 171h3v4h-3zM556 189h3v4h-3zM570 198h3v4h-3zM584 116h3v4h-3zM605 116h3v4h-3zM640 116h3v4h-3zM605 143h3v4h-3zM640 152h3v4h-3zM591 170h3v4h-3zM598 188h3v4h-3zM619 206h3v4h-3zM688 117h3v4h-3zM674 144h3v4h-3zM660 162h3v4h-3zM732 74h3v4h-3zM781 74h3v4h-3zM753 83h3v4h-3zM753 155h3v4h-3zM781 173h3v4h-3zM826 158h3v4h-3zM819 194h3v4h-3zM826 212h3v4h-3zM876 55h3v4h-3zM862 118h3v4h-3zM897 145h3v4h-3zM848 163h3v4h-3zM883 163h3v4h-3zM883 172h3v4h-3zM904 172h3v4h-3zM927 37h3v4h-3zM927 55h3v4h-3zM927 118h3v4h-3zM934 145h3v4h-3zM969 182h3v4h-3zM983 200h3v4h-3zM1019 62h3v4h-3zM1082 71h3v4h-3zM1075 107h3v4h-3zM1068 125h3v4h-3zM1026 206h3v4h-3zM1115 44h3v4h-3zM1150 44h3v4h-3zM1115 62h3v4h-3zM1150 125h3v4h-3zM1108 161h3v4h-3zM1177 103h3v4h-3zM1184 148h3v4h-3zM1313 114h3v4h-3zM1306 213h3v4h-3zM1328 143h3v4h-3zM1349 161h3v4h-3zM1391 193h3v4h-3z"/><path class="ww" d="M5 142h3v4h-3zM5 169h3v4h-3zM5 178h3v4h-3zM12 187h3v4h-3zM38 187h3v4h-3zM45 187h3v4h-3zM80 187h3v4h-3zM59 196h3v4h-3zM66 205h3v4h-3zM126 192h3v4h-3zM133 192h3v4h-3zM147 192h3v4h-3zM147 201h3v4h-3zM168 201h3v4h-3zM175 201h3v4h-3zM119 210h3v4h-3zM126 210h3v4h-3zM147 210h3v4h-3zM154 210h3v4h-3zM201 171h3v4h-3zM187 180h3v4h-3zM201 189h3v4h-3zM194 198h3v4h-3zM233 182h3v4h-3zM240 182h3v4h-3zM247 191h3v4h-3zM254 191h3v4h-3zM284 175h3v4h-3zM326 175h3v4h-3zM270 193h3v4h-3zM277 193h3v4h-3zM284 202h3v4h-3zM291 211h3v4h-3zM378 165h3v4h-3zM385 183h3v4h-3zM350 192h3v4h-3zM371 201h3v4h-3zM378 210h3v4h-3zM428 137h3v4h-3zM428 146h3v4h-3zM435 146h3v4h-3zM435 155h3v4h-3zM428 173h3v4h-3zM473 114h3v4h-3zM487 114h3v4h-3zM501 114h3v4h-3zM480 123h3v4h-3zM487 123h3v4h-3zM466 132h3v4h-3zM501 132h3v4h-3zM487 150h3v4h-3zM473 168h3v4h-3zM473 177h3v4h-3zM494 177h3v4h-3zM508 195h3v4h-3zM466 204h3v4h-3zM487 204h3v4h-3zM466 213h3v4h-3zM570 99h3v4h-3zM528 108h3v4h-3zM563 108h3v4h-3zM542 117h3v4h-3zM521 126h3v4h-3zM542 126h3v4h-3zM563 135h3v4h-3zM563 144h3v4h-3zM563 162h3v4h-3zM535 171h3v4h-3zM563 171h3v4h-3zM542 180h3v4h-3zM535 198h3v4h-3zM563 198h3v4h-3zM591 98h3v4h-3zM633 98h3v4h-3zM640 98h3v4h-3zM591 134h3v4h-3zM633 134h3v4h-3zM626 143h3v4h-3zM640 143h3v4h-3zM612 152h3v4h-3zM633 152h3v4h-3zM598 161h3v4h-3zM626 161h3v4h-3zM605 170h3v4h-3zM626 170h3v4h-3zM605 179h3v4h-3zM619 179h3v4h-3zM605 188h3v4h-3zM626 188h3v4h-3zM640 188h3v4h-3zM584 197h3v4h-3zM619 197h3v4h-3zM640 197h3v4h-3zM667 90h3v4h-3zM688 90h3v4h-3zM695 90h3v4h-3zM695 108h3v4h-3zM702 135h3v4h-3zM667 144h3v4h-3zM688 144h3v4h-3zM702 144h3v4h-3zM709 144h3v4h-3zM716 144h3v4h-3zM667 153h3v4h-3zM681 162h3v4h-3zM688 162h3v4h-3zM695 171h3v4h-3zM709 171h3v4h-3zM709 180h3v4h-3zM667 207h3v4h-3zM681 207h3v4h-3zM688 207h3v4h-3zM695 207h3v4h-3zM767 74h3v4h-3zM774 74h3v4h-3zM732 92h3v4h-3zM746 101h3v4h-3zM753 101h3v4h-3zM781 101h3v4h-3zM781 119h3v4h-3zM746 128h3v4h-3zM774 128h3v4h-3zM781 128h3v4h-3zM739 137h3v4h-3zM774 137h3v4h-3zM760 146h3v4h-3zM781 146h3v4h-3zM732 155h3v4h-3zM739 173h3v4h-3zM781 182h3v4h-3zM746 191h3v4h-3zM753 191h3v4h-3zM739 200h3v4h-3zM774 200h3v4h-3zM798 23h3v4h-3zM805 23h3v4h-3zM812 32h3v4h-3zM812 50h3v4h-3zM812 59h3v4h-3zM826 59h3v4h-3zM819 77h3v4h-3zM798 86h3v4h-3zM812 95h3v4h-3zM819 104h3v4h-3zM826 104h3v4h-3zM805 113h3v4h-3zM826 113h3v4h-3zM805 131h3v4h-3zM798 158h3v4h-3zM812 167h3v4h-3zM812 176h3v4h-3zM826 194h3v4h-3zM812 203h3v4h-3zM798 212h3v4h-3zM819 212h3v4h-3zM904 55h3v4h-3zM855 73h3v4h-3zM883 73h3v4h-3zM848 82h3v4h-3zM855 91h3v4h-3zM883 100h3v4h-3zM862 109h3v4h-3zM897 109h3v4h-3zM911 118h3v4h-3zM855 127h3v4h-3zM869 127h3v4h-3zM890 127h3v4h-3zM883 136h3v4h-3zM904 136h3v4h-3zM862 145h3v4h-3zM848 154h3v4h-3zM890 163h3v4h-3zM897 163h3v4h-3zM876 172h3v4h-3zM869 181h3v4h-3zM876 181h3v4h-3zM890 181h3v4h-3zM904 181h3v4h-3zM848 190h3v4h-3zM904 190h3v4h-3zM855 199h3v4h-3zM883 208h3v4h-3zM890 208h3v4h-3zM904 208h3v4h-3zM934 73h3v4h-3zM927 91h3v4h-3zM927 100h3v4h-3zM927 154h3v4h-3zM934 163h3v4h-3zM927 172h3v4h-3zM941 190h3v4h-3zM927 208h3v4h-3zM983 101h3v4h-3zM962 110h3v4h-3zM962 128h3v4h-3zM976 128h3v4h-3zM983 128h3v4h-3zM962 137h3v4h-3zM976 137h3v4h-3zM990 137h3v4h-3zM962 146h3v4h-3zM976 146h3v4h-3zM962 155h3v4h-3zM983 155h3v4h-3zM990 155h3v4h-3zM976 164h3v4h-3zM962 173h3v4h-3zM955 191h3v4h-3zM969 191h3v4h-3zM990 191h3v4h-3zM955 200h3v4h-3zM990 200h3v4h-3zM1033 62h3v4h-3zM1082 62h3v4h-3zM1033 71h3v4h-3zM1026 80h3v4h-3zM1033 89h3v4h-3zM1068 89h3v4h-3zM1089 89h3v4h-3zM1019 107h3v4h-3zM1019 116h3v4h-3zM1026 116h3v4h-3zM1061 134h3v4h-3zM1075 134h3v4h-3zM1082 134h3v4h-3zM1019 143h3v4h-3zM1033 143h3v4h-3zM1068 143h3v4h-3zM1061 152h3v4h-3zM1019 179h3v4h-3zM1054 179h3v4h-3zM1075 197h3v4h-3zM1061 206h3v4h-3zM1150 35h3v4h-3zM1101 44h3v4h-3zM1136 44h3v4h-3zM1143 53h3v4h-3zM1150 53h3v4h-3zM1108 62h3v4h-3zM1129 71h3v4h-3zM1122 80h3v4h-3zM1136 80h3v4h-3zM1115 89h3v4h-3zM1108 98h3v4h-3zM1101 107h3v4h-3zM1108 107h3v4h-3zM1115 107h3v4h-3zM1129 107h3v4h-3zM1136 116h3v4h-3zM1150 116h3v4h-3zM1115 125h3v4h-3zM1108 143h3v4h-3zM1129 143h3v4h-3zM1143 143h3v4h-3zM1129 152h3v4h-3zM1143 152h3v4h-3zM1129 179h3v4h-3zM1150 179h3v4h-3zM1108 188h3v4h-3zM1108 197h3v4h-3zM1108 206h3v4h-3zM1170 121h3v4h-3zM1177 121h3v4h-3zM1198 121h3v4h-3zM1205 130h3v4h-3zM1163 139h3v4h-3zM1184 139h3v4h-3zM1205 139h3v4h-3zM1191 157h3v4h-3zM1163 166h3v4h-3zM1184 166h3v4h-3zM1191 166h3v4h-3zM1205 184h3v4h-3zM1184 193h3v4h-3zM1205 193h3v4h-3zM1184 211h3v4h-3zM1241 120h3v4h-3zM1248 120h3v4h-3zM1234 138h3v4h-3zM1241 138h3v4h-3zM1255 138h3v4h-3zM1262 165h3v4h-3zM1220 174h3v4h-3zM1220 183h3v4h-3zM1227 192h3v4h-3zM1248 192h3v4h-3zM1227 201h3v4h-3zM1241 201h3v4h-3zM1285 123h3v4h-3zM1278 132h3v4h-3zM1285 132h3v4h-3zM1292 132h3v4h-3zM1313 132h3v4h-3zM1313 141h3v4h-3zM1278 159h3v4h-3zM1292 186h3v4h-3zM1292 204h3v4h-3zM1285 213h3v4h-3zM1313 213h3v4h-3zM1335 143h3v4h-3zM1342 143h3v4h-3zM1356 143h3v4h-3zM1328 161h3v4h-3zM1335 170h3v4h-3zM1342 179h3v4h-3zM1328 206h3v4h-3zM1370 166h3v4h-3zM1419 166h3v4h-3zM1377 175h3v4h-3zM1398 184h3v4h-3zM1419 184h3v4h-3zM1384 193h3v4h-3zM1412 202h3v4h-3zM1419 202h3v4h-3zM1391 211h3v4h-3z"/></g></svg>
+    <div class="water"><div class="reflect"></div></div>
+  </div>
+
+  <header class="nav" id="top">
+    <div class="nav-in">
+      <a class="brand" href="#top" aria-label="Casa Ocho, back to top">
+        <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M5 20a11 11 0 0 1 22 0z" fill="#FF2E93"/><path d="M4 23.5h24M8 27h16" stroke="#2DE2FF" stroke-width="2.2" stroke-linecap="round"/></svg>
+        Casa Ocho
+      </a>
+      <nav aria-label="Sections">
+        <ul class="nav-links">
+          <li><a href="#house">The house</a></li>
+          <li><a href="#amenities">Amenities</a></li>
+          <li><a href="#night">Your Miami night</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#host">Host</a></li>
+          <li><a href="#know">Good to know</a></li>
+        </ul>
+      </nav>
+      <button class="btn btn-hot btn-sm nav-cta" type="button" data-book>Book direct</button>
+    </div>
+  </header>
+
+  <div class="layout">
+    <main id="main">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-top">
+          <p class="eyebrow">Little Havana, Miami · Entire house</p>
+          <h1 id="hero-title"><span>Bright days,</span><span class="neon">neon nights.</span></h1>
+          <p class="lede">A newly renovated two bedroom home, a 15 minute walk from Calle Ocho. Your own entrance, backyard and parking spot, with nothing shared. Brickell, Wynwood and Downtown are under 10 minutes away.</p>
+          <div class="cta-row">
+            <button class="btn btn-hot" type="button" data-book>Book direct</button>
+            <a class="btn btn-ghost" href="#house">See the house</a>
+          </div>
+          <ul class="facts" aria-label="At a glance">
+            <li>6 guests</li><li>2 bedrooms</li><li>3 beds</li><li>1 bath</li><li><b>★</b> 4.99 · 106 reviews</li>
+          </ul>
+        </div>
+        <button class="hero-photo" type="button" data-shot="0" aria-label="Open photo: living room and open kitchen">
+          <img src="../assets/img/photo-1.jpg" width="1440" height="961" alt="Living room with a cognac leather sofa, open white kitchen with an island and green bar stools behind it" fetchpriority="high">
+          <span class="chip c1">Living room and open kitchen</span>
+          <span class="chip c2"><svg aria-hidden="true"><use href="#i-star"/></svg>Guest favorite · top 5% of homes</span>
+        </button>
+      </section>
+
+      <section class="sec" id="house" aria-labelledby="house-title">
+        <div class="sec-head reveal">
+          <p class="eyebrow">The house · by day</p>
+          <h2 id="house-title">Bright, renovated, and all yours.</h2>
+          <p>Hotel-quality finishes with the privacy of a home: one private unit in a duplex on a quiet, safe residential street. Tap any photo to see it larger.</p>
+        </div>
+        <div class="bento reveal">
+          <button class="shot b-living" type="button" data-shot="0"><img src="../assets/img/photo-1.jpg" width="1440" height="961" loading="lazy" alt="Living room with leather sofa and open kitchen"><span class="chip">Living room</span></button>
+          <button class="shot b-kitchen" type="button" data-shot="1"><img src="../assets/img/photo-2.jpg" width="1440" height="961" loading="lazy" alt="Kitchen with white shaker cabinets, a large white island and globe pendant lights"><span class="chip">Full kitchen</span></button>
+          <button class="shot b-bed1" type="button" data-shot="2"><img src="../assets/img/photo-4.jpg" width="1440" height="961" loading="lazy" alt="Bedroom 1 with a queen bed, rust velvet curtains, sage and orange pillows and rattan lamps"><span class="chip">Bedroom 1 · queen</span></button>
+          <div class="tile t-sleeps">
+            <p class="big"><small>Sleeps</small>6</p>
+            <ul><li>2 bedrooms · 3 beds</li><li>1 bath</li></ul>
+          </div>
+          <button class="shot b-bed2" type="button" data-shot="3"><img src="../assets/img/photo-6.jpg" width="1440" height="961" loading="lazy" alt="Bedroom 2 with two double beds, coral pillows and a vintage Miami travel poster"><span class="chip">Bedroom 2 · 2 doubles</span></button>
+          <button class="shot b-bath" type="button" data-shot="4"><img src="../assets/img/photo-5.jpg" width="1440" height="961" loading="lazy" alt="Bathroom with a white subway tile walk-in glass shower, black fixtures and floating wood shelves"><span class="chip">Bath</span></button>
+          <button class="shot b-yard" type="button" data-shot="5"><img src="../assets/img/photo-3.jpg" width="1440" height="961" loading="lazy" alt="Private backyard with a wood dining table for six under a tan umbrella, a grill, string lights and a green hedge"><span class="chip">Private backyard</span></button>
+          <div class="tile t-note">
+            <p>Newly renovated, top to bottom.</p>
+            <span>Own entrance · nothing shared</span>
+          </div>
+        </div>
+        <dl class="space-list reveal">
+          <div><dt>Bedroom 1</dt><dd>1 queen bed</dd></div>
+          <div><dt>Bedroom 2</dt><dd>2 double beds</dd></div>
+          <div><dt>Bathroom</dt><dd>1 bath, walk-in shower</dd></div>
+        </dl>
+      </section>
+
+      <section class="sec" id="amenities" aria-labelledby="amen-title">
+        <div class="sec-head reveal">
+          <p class="eyebrow">What's included</p>
+          <h2 id="amen-title">Everything you need, nothing you share.</h2>
+        </div>
+        <div class="amen reveal">
+          <article class="am am-yard">
+            <div class="lights" aria-hidden="true"><i style="left:0;top:14px"></i><i style="left:16%;top:22px"></i><i style="left:33%;top:26px"></i><i style="left:50%;top:24px"></i><i style="left:67%;top:18px"></i><i style="left:84%;top:10px"></i><i style="left:98%;top:2px"></i></div>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11a9 6 0 0 1 18 0z"/><path d="M12 11v10M8 21h8"/></svg>
+            <h3>A private backyard for golden hour</h3>
+            <p>Seating for six under an umbrella, a BBQ grill and string lights for when the sky turns pink. It's fenced, green and only yours.</p>
+          </article>
+          <article class="am am-wide">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M9 17V7h4a3 3 0 0 1 0 6H9"/></svg>
+            <h3>Private driveway parking</h3>
+            <p>One driveway spot that's yours, plus free street parking. Accessible parking spot and accessible guest entrance.</p>
+          </article>
+          <article class="am">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 9h11v5a5 5 0 0 1-5 5h-1a5 5 0 0 1-5-5z"/><path d="M16 10h1.5a2.5 2.5 0 0 1 0 5H16M8 3v3M11 2v4M14 3v3"/></svg>
+            <h3>Full kitchen</h3>
+            <p>Cookware, appliances and a coffee station.</p>
+          </article>
+          <article class="am">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="2.5" width="16" height="19" rx="2.5"/><circle cx="12" cy="13" r="4.5"/><path d="M7.5 6h.01M10.5 6h.01"/></svg>
+            <h3>Washer and dryer</h3>
+            <p>In the unit, so you can pack light.</p>
+          </article>
+          <article class="am am-wide">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 8.5a15 15 0 0 1 20 0M5 12a10 10 0 0 1 14 0M8.5 15.5a5 5 0 0 1 7 0"/><circle cx="12" cy="19" r="1"/></svg>
+            <h3>Fast WiFi and a dedicated workspace</h3>
+            <p>Take the morning call, then take the afternoon off.</p>
+          </article>
+          <article class="am">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="4" width="19" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+            <h3>Smart TVs</h3>
+            <p>Sign in to your own apps.</p>
+          </article>
+          <article class="am">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 21V4.5A1.5 1.5 0 0 1 6.5 3h11A1.5 1.5 0 0 1 19 4.5V21M3 21h18"/><path d="M15 12h.01"/></svg>
+            <h3>Own entrance</h3>
+            <p>Come and go on your schedule.</p>
+          </article>
+          <article class="am am-wide">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22V12M12 12C12 7 8 4 3 4c0 5 4 8 9 8zM12 14c0-4 3-7 8-7 0 4-3 7-8 7z"/></svg>
+            <h3>Garden view, quiet street</h3>
+            <p>A safe residential block that winds down at night, so you sleep well after a late one.</p>
+          </article>
+          <a class="am am-wide am-link" href="#night">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-12a7 7 0 0 1 14 0c0 5.8-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>
+            <h3>Calle Ocho is a 15 minute walk</h3>
+            <span class="go">Plan your night →</span>
+          </a>
+        </div>
+      </section>
+
+      <section class="sec" id="night" aria-labelledby="night-title">
+        <div class="sec-head reveal">
+          <p class="eyebrow">After sunset</p>
+          <h2 id="night-title">Your Miami night</h2>
+          <p>Spend the day in the backyard. When the sun drops into the bay, the city is right there.</p>
+        </div>
+        <div class="night-wrap reveal">
+          <ul class="spots">
+            <li class="spot">
+              <p class="num g-pink" aria-label="15 minute walk">15<span class="unit">min<br>walk</span></p>
+              <div><h3>Little Havana</h3><p>Live music spilling out of Calle Ocho, domino tables, and a late cafecito from a walk-up window before you head home.</p></div>
+            </li>
+            <li class="spot">
+              <p class="num g-cyan" aria-label="Under 10 minutes by car"><span class="pre">under</span>10<span class="unit">min<br>drive</span></p>
+              <div><h3>Brickell</h3><p>Rooftop bars over the bay, the skyline lit up, and dinners that start late and run later.</p></div>
+            </li>
+            <li class="spot">
+              <p class="num g-coral" aria-label="Under 10 minutes by car"><span class="pre">under</span>10<span class="unit">min<br>drive</span></p>
+              <div><h3>Wynwood</h3><p>Street murals after dark, craft breweries and galleries open into the evening.</p></div>
+            </li>
+          </ul>
+          <div class="more">
+            <div><b>&lt;10<small>min</small></b><span>Downtown</span></div>
+            <div><b>&lt;10<small>min</small></b><span>Coral Gables</span></div>
+            <div><b>Close</b><span>Coconut Grove</span></div>
+            <div><b>~15<small>min</small></b><span>Miami International Airport</span></div>
+            <div><b>~20<small>min</small></b><span>South Beach</span></div>
+          </div>
+          <p class="fine">Drive times are approximate and depend on traffic. The exact address is shared after booking.</p>
+        </div>
+      </section>
+
+      <section class="sec" id="reviews" aria-labelledby="reviews-title">
+        <div class="sec-head reveal">
+          <p class="eyebrow">Reviews</p>
+          <h2 id="reviews-title">106 stays, nearly perfect.</h2>
+        </div>
+        <div class="score">
+          <div class="score-top reveal">
+            <p class="big-score" aria-label="Rated 4.99 out of 5">4.99</p>
+            <div>
+              <p class="score-meta">out of 5 <span>· 106 reviews on Airbnb</span></p>
+              <div class="badges"><span class="badge">Guest favorite</span><span class="badge">Top 5% of homes</span><span class="badge">Superhost</span></div>
+            </div>
+          </div>
+          <ul class="bars" aria-label="Category scores">
+            <li><span>Cleanliness</span><span class="track"><i style="--v:100%"></i></span><output>5.0</output></li>
+            <li><span>Accuracy</span><span class="track"><i style="--v:100%"></i></span><output>5.0</output></li>
+            <li><span>Check-in</span><span class="track"><i style="--v:100%"></i></span><output>5.0</output></li>
+            <li><span>Communication</span><span class="track"><i style="--v:100%"></i></span><output>5.0</output></li>
+            <li><span>Location</span><span class="track"><i style="--v:98%"></i></span><output>4.9</output></li>
+            <li><span>Value</span><span class="track"><i style="--v:98%"></i></span><output>4.9</output></li>
+          </ul>
+        </div>
+        <div class="quotes reveal">
+          <figure class="quote"><blockquote>"Spotless, and even nicer than the photos. The backyard was our favorite place every evening before we went out."</blockquote><figcaption>[Guest name] · [Month Year]</figcaption></figure>
+          <figure class="quote"><blockquote>"Easy parking, a quiet street, and we walked to Calle Ocho for music both nights. Alex answered every question within minutes."</blockquote><figcaption>[Guest name] · [Month Year]</figcaption></figure>
+          <figure class="quote"><blockquote>"Felt like a boutique hotel with a whole house to ourselves. Ten minutes to Brickell for dinner, home in no time."</blockquote><figcaption>[Guest name] · [Month Year]</figcaption></figure>
+        </div>
+        <p class="fine">Sample quotes: real guest reviews go here.</p>
+      </section>
+
+      <section class="sec" id="host" aria-labelledby="host-title">
+        <div class="host reveal">
+          <div class="mono" aria-hidden="true"><span>A</span></div>
+          <div>
+            <p class="eyebrow">Meet your host</p>
+            <h2 id="host-title">Alex, a Miami local and Superhost</h2>
+            <p class="bio">[A few lines from Alex about renovating the house, the neighborhood, and his favorite spots for music and cafecito nearby.]</p>
+            <ul class="host-stats">
+              <li><b>Superhost</b>on Airbnb</li>
+              <li><b>4 years</b>hosting</li>
+              <li><b>100%</b>response rate</li>
+              <li><b>Within an hour</b>typical reply</li>
+            </ul>
+            <a class="btn btn-ghost btn-sm" href="#contact">Message Alex</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="sec" id="know" aria-labelledby="know-title">
+        <div class="sec-head reveal">
+          <p class="eyebrow">Before you book</p>
+          <h2 id="know-title">Good to know</h2>
+        </div>
+        <div class="know reveal">
+          <div>
+            <div class="times">
+              <div class="time"><span>Check-in</span><b>[3:00 PM]</b></div>
+              <div class="time"><span>Checkout</span><b>[11:00 AM]</b></div>
+            </div>
+            <div class="rules">
+              <h3>House rules</h3>
+              <ul>
+                <li>Up to 6 guests</li>
+                <li>[No parties or events]</li>
+                <li>[No smoking]</li>
+                <li>[Quiet hours]</li>
+                <li>[Pet policy]</li>
+              </ul>
+              <p>The exact address and entry details are shared after you book.</p>
+            </div>
+          </div>
+          <div class="faq">
+            <h3>Questions</h3>
+            <details><summary>Why book direct?</summary><p>Same house, same host, no platform guest fee. On a typical stay that's about 14% back in your pocket, and you can talk to Alex directly before and after you book.</p></details>
+            <details><summary>How does payment work?</summary><p>[Payment method and schedule, for example secure card checkout and when the balance is charged.]</p></details>
+            <details><summary>What's the cancellation policy?</summary><p>[policy]</p></details>
+            <details><summary>Where do I park?</summary><p>One private driveway spot is yours, and street parking nearby is free. There's an accessible parking spot, and the guest entrance is accessible too.</p></details>
+            <details><summary>Can I check in early?</summary><p>[Early check-in policy]. Send Alex your arrival time and he'll let you know what's possible.</p></details>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <aside class="book" id="book" aria-label="Book your stay">
+      <div class="panel" id="panel">
+        <div class="sheet-head">
+          <h2>Book direct</h2>
+          <button type="button" id="sheet-close" aria-label="Close booking"><svg aria-hidden="true"><use href="#i-x"/></svg></button>
+        </div>
+        <div class="form">
+          <div class="p-top">
+            <p class="p-price"><span class="from">Book direct</span>$185 <small>/ night and up</small></p>
+            <p class="p-rate"><svg aria-hidden="true"><use href="#i-star"/></svg>4.99 · 106</p>
+          </div>
+          <div class="dates">
+            <button type="button" id="in-btn" aria-expanded="false" aria-controls="cal"><span>Check-in</span><b class="empty" id="in-val">Add date</b></button>
+            <button type="button" id="out-btn" aria-expanded="false" aria-controls="cal"><span>Checkout</span><b class="empty" id="out-val">Add date</b></button>
+          </div>
+          <div class="cal" id="cal" role="group" aria-label="Choose dates">
+            <div class="cal-nav">
+              <button type="button" id="prev" aria-label="Previous month"><svg aria-hidden="true"><use href="#i-left"/></svg></button>
+              <button type="button" id="next" aria-label="Next month"><svg aria-hidden="true"><use href="#i-right"/></svg></button>
+            </div>
+            <div class="months" id="months"></div>
+            <div class="cal-foot">
+              <div class="legend"><span><i class="lg-sel"></i>Your stay</span><span><i class="lg-bk"></i>Booked</span><span>2 night minimum</span></div>
+              <button type="button" id="cal-done">Done</button>
+            </div>
+          </div>
+          <div class="guests">
+            <div><span>Guests</span><b id="g-label">2 guests</b></div>
+            <div class="stepper">
+              <button type="button" id="g-minus" aria-label="Remove a guest">−</button>
+              <output id="g-val" aria-live="polite">2</output>
+              <button type="button" id="g-plus" aria-label="Add a guest">+</button>
+            </div>
+          </div>
+          <p class="hint" id="hint" aria-live="polite">Choose your dates to see the total.</p>
+          <div class="quote-box" id="qbox"></div>
+          <button class="btn btn-hot req" type="button" id="req">Request to book</button>
+          <p class="small">Sample rates for this preview: $185 per night Sunday to Thursday, $225 Friday and Saturday, $95 cleaning, 13% taxes. The Airbnb comparison adds its guest service fee of about 14%. You won't be charged.</p>
+        </div>
+        <div class="done" id="done" tabindex="-1">
+          <div class="ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div>
+          <h3>Request sent</h3>
+          <p>This is a preview, so nothing was actually sent and no card was charged. On the live site, Alex confirms your request, usually within the hour.</p>
+          <p class="sum" id="sum"></p>
+          <button class="btn btn-ghost btn-sm" type="button" id="restart">Start over</button>
+        </div>
+      </div>
+    </aside>
+  </div>
+</div>
+
+<div class="mbar" id="mbar">
+  <p id="mbar-text"><b>$185 / night and up</b>★ 4.99 · Book direct</p>
+  <button class="btn btn-hot btn-sm" type="button" data-book aria-controls="book">Check availability</button>
+</div>
+
+<footer class="foot" id="contact">
+  <div class="foot-in">
+    <div>
+      <p class="eyebrow">Casa Ocho · Little Havana, Miami</p>
+      <p class="tag">Bright days, <span class="neon">neon nights.</span></p>
+    </div>
+    <ul>
+      <li>[email]</li>
+      <li>[phone]</li>
+      <li>Hosted by Alex</li>
+    </ul>
+    <div class="meta">
+      <p>Concept 3 of 4 · Neon Nights</p>
+      <p><a href="../">Back to all concepts</a></p>
+    </div>
+  </div>
+</footer>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Photo viewer">
+  <figure><img id="lb-img" src="" alt=""><figcaption id="lb-cap"></figcaption></figure>
+  <button class="lb-btn lb-close" type="button" id="lb-close" aria-label="Close photo viewer"><svg aria-hidden="true"><use href="#i-x"/></svg></button>
+  <button class="lb-btn lb-prev" type="button" id="lb-prev" aria-label="Previous photo"><svg aria-hidden="true"><use href="#i-left"/></svg></button>
+  <button class="lb-btn lb-next" type="button" id="lb-next" aria-label="Next photo"><svg aria-hidden="true"><use href="#i-right"/></svg></button>
+</div>
+
+<script>
+(() => {
+  const $ = (s, c = document) => c.querySelector(s);
+  const $$ = (s, c = document) => [...c.querySelectorAll(s)];
+  const root = document.documentElement;
+  root.classList.add('js');
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const desk = matchMedia('(min-width: 1080px)');
+
+  const nav = $('.nav');
+  let ticking = false;
+  const onScroll = () => {
+    ticking = false;
+    nav.classList.toggle('scrolled', scrollY > 20);
+    if (!reduce) {
+      const d = Math.min(1, Math.max(0, scrollY / (innerHeight * 0.85)));
+      root.style.setProperty('--dusk', (0.12 + d * 0.88).toFixed(3));
+    }
+  };
+  addEventListener('scroll', () => { if (!ticking) { ticking = true; requestAnimationFrame(onScroll); } }, { passive: true });
+  onScroll();
+
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver(es => es.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+    }), { rootMargin: '0px 0px -10% 0px' });
+    $$('.reveal, .bars').forEach(el => io.observe(el));
+  } else {
+    $$('.reveal, .bars').forEach(el => el.classList.add('in'));
+  }
+
+  /* lightbox */
+  const photos = [
+    ['photo-1.jpg', 'Living room with a cognac leather sofa and the open kitchen behind', 'Living room and open kitchen'],
+    ['photo-2.jpg', 'Kitchen with white shaker cabinets, a big white island and globe pendants', 'Full kitchen with coffee station'],
+    ['photo-4.jpg', 'Bedroom 1 with a queen bed, rust velvet curtains and rattan lamps', 'Bedroom 1 · 1 queen bed'],
+    ['photo-6.jpg', 'Bedroom 2 with two double beds and a vintage Miami travel poster', 'Bedroom 2 · 2 double beds'],
+    ['photo-5.jpg', 'Bathroom with a walk-in glass shower, white subway tile and black fixtures', 'Bathroom · walk-in shower'],
+    ['photo-3.jpg', 'Private backyard with a dining table for six, umbrella, grill and string lights', 'Private backyard with BBQ']
+  ];
+  const lb = $('#lb'), lbImg = $('#lb-img'), lbCap = $('#lb-cap');
+  let lbIndex = 0, lbReturn = null;
+  const showPhoto = i => {
+    lbIndex = (i + photos.length) % photos.length;
+    const [f, alt, cap] = photos[lbIndex];
+    lbImg.src = '../assets/img/' + f;
+    lbImg.alt = alt;
+    lbCap.textContent = `${cap} · ${lbIndex + 1} of ${photos.length}`;
+  };
+  const openLb = (i, from) => {
+    lbReturn = from;
+    showPhoto(i);
+    lb.classList.add('open');
+    document.body.classList.add('lock');
+    $('#lb-close').focus();
+  };
+  const closeLb = () => {
+    lb.classList.remove('open');
+    document.body.classList.remove('lock');
+    if (lbReturn) lbReturn.focus();
+  };
+  $$('[data-shot]').forEach(b => b.addEventListener('click', () => openLb(+b.dataset.shot, b)));
+  $('#lb-close').addEventListener('click', closeLb);
+  $('#lb-prev').addEventListener('click', () => showPhoto(lbIndex - 1));
+  $('#lb-next').addEventListener('click', () => showPhoto(lbIndex + 1));
+  lb.addEventListener('click', e => { if (e.target === lb) closeLb(); });
+
+  /* booking */
+  const RATE = { week: 185, weekend: 225 }, CLEANING = 95, TAX = 0.13, AIRBNB_FEE = 0.14, MIN_NIGHTS = 2, MAX_GUESTS = 6;
+  const today = new Date(); today.setHours(0, 0, 0, 0);
+  const addDays = (d, n) => { const x = new Date(d); x.setDate(x.getDate() + n); return x; };
+  const key = d => `${d.getFullYear()}-${d.getMonth() + 1}-${d.getDate()}`;
+  const parse = k => { const [y, m, d] = k.split('-').map(Number); return new Date(y, m - 1, d); };
+  const nights = (a, b) => Math.round((b - a) / 864e5);
+  const booked = new Set([3, 4, 5, 11, 12, 19, 20, 21, 33, 34, 46, 47].map(n => key(addDays(today, n))));
+  const isBooked = d => booked.has(key(d));
+  const money = n => '$' + n.toLocaleString('en-US');
+  const fmt = d => d.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' });
+  const fmtShort = d => d.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+  const monthStart = new Date(today.getFullYear(), today.getMonth(), 1);
+
+  let start = null, end = null, guests = 2, view = new Date(monthStart);
+  const book = $('#book'), panel = $('#panel'), cal = $('#cal'), months = $('#months');
+  const hint = $('#hint'), qbox = $('#qbox');
+
+  const checkoutLimit = () => {
+    for (let i = 1; i <= 400; i++) { const d = addDays(start, i); if (isBooked(d)) return d; }
+    return addDays(start, 400);
+  };
+
+  const dayInfo = d => {
+    if (d < today) return { off: true, why: 'unavailable' };
+    if (start && !end && d > start) {
+      if (nights(start, d) < MIN_NIGHTS) return { off: true, why: '2 night minimum' };
+      if (d > checkoutLimit()) return { off: true, why: 'unavailable' };
+      return { off: false, co: isBooked(d) };
+    }
+    if (isBooked(d)) return { off: true, why: 'booked', booked: true };
+    return { off: false };
+  };
+
+  const renderCal = () => {
+    const count = desk.matches ? 2 : 1;
+    const dows = ['S', 'M', 'T', 'W', 'T', 'F', 'S'];
+    let html = '';
+    for (let m = 0; m < count; m++) {
+      const first = new Date(view.getFullYear(), view.getMonth() + m, 1);
+      const days = new Date(first.getFullYear(), first.getMonth() + 1, 0).getDate();
+      html += `<div class="month"><h4>${first.toLocaleDateString('en-US', { month: 'long', year: 'numeric' })}</h4><div class="dow" aria-hidden="true">${dows.map(x => `<span>${x}</span>`).join('')}</div><div class="days">`;
+      for (let b = 0; b < first.getDay(); b++) html += '<span></span>';
+      for (let n = 1; n <= days; n++) {
+        const d = new Date(first.getFullYear(), first.getMonth(), n);
+        const info = dayInfo(d);
+        const cls = ['day'];
+        if (info.booked || info.co) cls.push('booked');
+        if (info.co) cls.push('co');
+        if (key(d) === key(today)) cls.push('today');
+        if (start && key(d) === key(start)) cls.push('s');
+        if (start && !end && key(d) === key(start)) cls.push('only');
+        if (end && key(d) === key(end)) cls.push('e');
+        if (start && end && d > start && d < end) cls.push('in');
+        let label = d.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' });
+        if (info.off) label += `, ${info.why}`;
+        else if (info.co) label += ', checkout only';
+        html += `<button type="button" class="${cls.join(' ')}" data-d="${key(d)}" aria-label="${label}"${info.off ? ' disabled' : ''}${cls.includes('s') || cls.includes('e') ? ' aria-pressed="true"' : ''}>${n}</button>`;
+      }
+      html += '</div></div>';
+    }
+    months.innerHTML = html;
+    $('#prev').disabled = view <= monthStart;
+    const ahead = (view.getFullYear() - monthStart.getFullYear()) * 12 + view.getMonth() - monthStart.getMonth();
+    $('#next').disabled = ahead >= 11;
+  };
+
+  const quote = () => {
+    let wk = 0, we = 0;
+    for (let d = new Date(start); d < end; d = addDays(d, 1)) { const g = d.getDay(); (g === 5 || g === 6) ? we++ : wk++; }
+    const stay = wk * RATE.week + we * RATE.weekend;
+    const sub = stay + CLEANING;
+    const tax = Math.round(sub * TAX);
+    return { wk, we, n: wk + we, stay, tax, total: sub + tax, save: Math.round(sub * AIRBNB_FEE) };
+  };
+
+  const renderSummary = () => {
+    const inV = $('#in-val'), outV = $('#out-val');
+    inV.textContent = start ? fmt(start) : 'Add date';
+    inV.classList.toggle('empty', !start);
+    outV.textContent = end ? fmt(end) : 'Add date';
+    outV.classList.toggle('empty', !end);
+    $('#g-val').textContent = guests;
+    $('#g-label').textContent = guests + (guests === 1 ? ' guest' : ' guests');
+    $('#g-minus').disabled = guests <= 1;
+    $('#g-plus').disabled = guests >= MAX_GUESTS;
+    const mbar = $('#mbar-text');
+    if (start && end) {
+      const q = quote();
+      const rows = [];
+      if (q.wk) rows.push(`<li><span>${money(RATE.week)} × ${q.wk} ${q.wk === 1 ? 'weeknight' : 'weeknights'}</span><span>${money(q.wk * RATE.week)}</span></li>`);
+      if (q.we) rows.push(`<li><span>${money(RATE.weekend)} × ${q.we} weekend ${q.we === 1 ? 'night' : 'nights'}</span><span>${money(q.we * RATE.weekend)}</span></li>`);
+      rows.push(`<li><span>Cleaning fee</span><span>${money(CLEANING)}</span></li>`);
+      rows.push(`<li><span>Taxes (13%)</span><span>${money(q.tax)}</span></li>`);
+      rows.push(`<li class="total"><span>Total for ${q.n} nights</span><span>${money(q.total)}</span></li>`);
+      qbox.innerHTML = `<ul class="lines">${rows.join('')}</ul><p class="save">Book direct and save: <b>you save ${money(q.save)}</b> vs. the same stay on Airbnb.</p>`;
+      mbar.innerHTML = `<b>${money(q.total)} total</b>${fmtShort(start)} to ${fmtShort(end)} · ${guests} ${guests === 1 ? 'guest' : 'guests'}`;
+    } else {
+      qbox.innerHTML = '';
+      mbar.innerHTML = '<b>$185 / night and up</b>★ 4.99 · Book direct';
+    }
+  };
+
+  const render = () => { renderCal(); renderSummary(); };
+
+  const setOpenState = open => {
+    $('#in-btn').setAttribute('aria-expanded', open);
+    $('#out-btn').setAttribute('aria-expanded', open);
+    $('#in-btn').classList.toggle('active', open && (!start || !!end));
+    $('#out-btn').classList.toggle('active', open && !!start && !end);
+  };
+  const focusDay = () => {
+    const target = (start && months.querySelector(`[data-d="${key(start)}"]`)) || months.querySelector('.day:not(:disabled)');
+    if (target) target.focus();
+  };
+  const openCal = () => {
+    if (!desk.matches) return;
+    cal.classList.add('open');
+    setOpenState(true);
+    focusDay();
+  };
+  const closeCal = (refocus) => {
+    if (!cal.classList.contains('open')) return;
+    cal.classList.remove('open');
+    setOpenState(false);
+    if (refocus) $('#in-btn').focus();
+  };
+
+  const openSheet = () => {
+    book.classList.add('open');
+    document.body.classList.add('lock');
+    $$('[data-book][aria-controls]').forEach(b => b.setAttribute('aria-expanded', 'true'));
+    setTimeout(() => $('#sheet-close').focus(), 50);
+  };
+  const closeSheet = () => {
+    book.classList.remove('open');
+    document.body.classList.remove('lock');
+    $$('[data-book][aria-controls]').forEach(b => b.setAttribute('aria-expanded', 'false'));
+    $('#mbar button').focus();
+  };
+  const openBooking = () => {
+    panel.classList.remove('is-done');
+    if (desk.matches) openCal(); else openSheet();
+  };
+
+  $$('[data-book]').forEach(b => b.addEventListener('click', e => { e.stopPropagation(); openBooking(); }));
+  $('#sheet-close').addEventListener('click', closeSheet);
+  ['#in-btn', '#out-btn'].forEach(s => $(s).addEventListener('click', e => {
+    e.stopPropagation();
+    if (cal.classList.contains('open')) closeCal(false); else openCal();
+  }));
+  $('#cal-done').addEventListener('click', () => closeCal(true));
+  $('#prev').addEventListener('click', () => { view = new Date(view.getFullYear(), view.getMonth() - 1, 1); renderCal(); });
+  $('#next').addEventListener('click', () => { view = new Date(view.getFullYear(), view.getMonth() + 1, 1); renderCal(); });
+
+  months.addEventListener('click', e => {
+    e.stopPropagation();
+    const btn = e.target.closest('.day');
+    if (!btn || btn.disabled) return;
+    const d = parse(btn.dataset.d);
+    if (!start || end || d <= start) {
+      start = d; end = null;
+      hint.textContent = 'Now choose your checkout date. 2 night minimum.';
+    } else {
+      end = d;
+      hint.textContent = `${nights(start, end)} nights selected.`;
+      if (desk.matches) setTimeout(() => closeCal(true), 280);
+    }
+    render();
+    setOpenState(cal.classList.contains('open'));
+    const again = months.querySelector(`[data-d="${btn.dataset.d}"]`);
+    if (again && !end) again.focus();
+  });
+
+  months.addEventListener('keydown', e => {
+    const steps = { ArrowLeft: -1, ArrowRight: 1, ArrowUp: -7, ArrowDown: 7 };
+    const btn = e.target.closest('.day');
+    if (!btn || !(e.key in steps)) return;
+    e.preventDefault();
+    let d = parse(btn.dataset.d);
+    for (let i = 0; i < 60; i++) {
+      d = addDays(d, steps[e.key]);
+      const t = months.querySelector(`[data-d="${key(d)}"]`);
+      if (!t) return;
+      if (!t.disabled) { t.focus(); return; }
+    }
+  });
+
+  $('#g-minus').addEventListener('click', () => { if (guests > 1) { guests--; renderSummary(); } });
+  $('#g-plus').addEventListener('click', () => { if (guests < MAX_GUESTS) { guests++; renderSummary(); } });
+
+  $('#req').addEventListener('click', e => {
+    e.stopPropagation();
+    if (!start || !end) {
+      hint.textContent = start ? 'Choose your checkout date first.' : 'Choose your check-in and checkout dates first.';
+      openCal();
+      return;
+    }
+    const q = quote();
+    closeCal(false);
+    $('#sum').innerHTML = `${fmt(start)} to ${fmt(end)}<br>${q.n} nights · ${guests} ${guests === 1 ? 'guest' : 'guests'}<br>Total ${money(q.total)} · you saved ${money(q.save)} by booking direct`;
+    panel.classList.add('is-done');
+    $('#done').focus();
+  });
+  $('#restart').addEventListener('click', () => {
+    start = end = null;
+    hint.textContent = 'Choose your dates to see the total.';
+    panel.classList.remove('is-done');
+    render();
+    $('#in-btn').focus();
+  });
+
+  document.addEventListener('click', e => {
+    if (cal.classList.contains('open') && !panel.contains(e.target)) closeCal(false);
+  });
+
+  document.addEventListener('keydown', e => {
+    if (lb.classList.contains('open')) {
+      if (e.key === 'Escape') closeLb();
+      else if (e.key === 'ArrowLeft') showPhoto(lbIndex - 1);
+      else if (e.key === 'ArrowRight') showPhoto(lbIndex + 1);
+      else if (e.key === 'Tab') {
+        const f = $$('.lb-btn');
+        const i = f.indexOf(document.activeElement);
+        e.preventDefault();
+        f[(i + (e.shiftKey ? -1 : 1) + f.length) % f.length].focus();
+      }
+      return;
+    }
+    if (e.key === 'Escape') {
+      if (cal.classList.contains('open')) closeCal(true);
+      else if (book.classList.contains('open')) closeSheet();
+    }
+  });
+
+  desk.addEventListener('change', () => {
+    if (desk.matches && book.classList.contains('open')) { book.classList.remove('open'); document.body.classList.remove('lock'); }
+    cal.classList.remove('open');
+    setOpenState(false);
+    renderCal();
+  });
+
+  render();
+})();
+</script>
+</body>
+</html>

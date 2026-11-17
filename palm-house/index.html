@@ -1,0 +1,1201 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Casa Ocho · A private house in Little Havana, Miami</title>
+<meta name="description" content="A newly renovated two bedroom house in Little Havana, Miami, with a private backyard and driveway parking. Book direct with your host, Alex.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='32' fill='%231F3A2E'/%3E%3Ctext x='32' y='44' text-anchor='middle' font-family='Georgia,serif' font-style='italic' font-size='34' fill='%23EDE4D3'%3EC8%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --linen:#EDE4D3;
+  --paper:#F6F1E7;
+  --sand:#E2D6C0;
+  --palm:#1F3A2E;
+  --palm-2:#2B4C3C;
+  --sage:#A9B79A;
+  --sage-soft:#DCE1CF;
+  --rust:#9A4527;
+  --cognac:#B4703E;
+  --ink:#1C1A17;
+  --ink-2:#4A453D;
+  --line:rgba(28,26,23,.14);
+  --serif:"Cormorant Garamond",Georgia,"Times New Roman",serif;
+  --sans:"Jost",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --gap:20px;
+  --cols:[full-start] 20px [c-start] minmax(0,1fr) [c-end] 20px [full-end];
+  --ease:cubic-bezier(.22,.61,.36,1);
+}
+@media (min-width:900px){
+  :root{--gap:clamp(18px,2vw,28px);--cols:[full-start] minmax(24px,1fr) [c-start] repeat(12,minmax(0,72px)) [c-end] minmax(24px,1fr) [full-end]}
+}
+*,*::before,*::after{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--linen);color:var(--ink);font:400 17px/1.7 var(--sans);overflow-x:clip;-webkit-font-smoothing:antialiased}
+html.lock,html.lock body{overflow:hidden}
+img{display:block;max-width:100%;height:auto}
+button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--rust);outline-offset:3px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip{position:absolute;left:16px;top:-60px;z-index:100;background:var(--palm);color:var(--paper);padding:10px 16px;text-decoration:none}
+.skip:focus{top:12px}
+
+.g{display:grid;grid-template-columns:var(--cols);column-gap:var(--gap)}
+.g>*{grid-column:c-start/c-end}
+.bleed{grid-column:full-start/full-end}
+
+.lbl{font:500 .7rem/1.3 var(--sans);letter-spacing:.24em;text-transform:uppercase;color:var(--rust);margin:0}
+.h2{font:300 clamp(2.3rem,4.4vw,4.1rem)/1.04 var(--serif);letter-spacing:-.01em;margin:0 0 28px;color:var(--ink)}
+.h2 em,.h1 em{font-style:italic;color:var(--palm-2)}
+.lede{font-size:1.06rem;color:var(--ink-2);max-width:34em;margin:0 0 1.1em}
+p{margin:0 0 1em}
+.chap{display:flex;align-items:flex-end;gap:18px;margin:0 0 30px}
+.chap-n{font:italic 300 clamp(3.6rem,6vw,5.8rem)/.78 var(--serif);color:var(--rust)}
+.chap-t{font:500 .72rem/1 var(--sans);letter-spacing:.28em;text-transform:uppercase;padding:0 0 6px 18px;border-left:1px solid var(--line)}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 30px;background:var(--palm);color:var(--paper);font:500 .76rem/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;text-decoration:none;transition:background .4s var(--ease)}
+.btn:hover{background:var(--palm-2)}
+.btn-line{display:inline-flex;align-items:center;gap:10px;font:500 .76rem/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;text-decoration:none;padding:6px 0;border-bottom:1px solid currentColor}
+
+.ph{display:block;width:100%;height:100%;overflow:hidden;position:relative;background:var(--sand)}
+.ph img{width:100%;height:100%;object-fit:cover;transition:transform 1.6s var(--ease)}
+.ph:hover img{transform:scale(1.03)}
+.ph:focus-visible{outline-offset:-4px;outline-color:var(--paper)}
+
+/* palm shade */
+.shade{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:3}
+.frond{position:absolute;color:var(--palm);opacity:.17;mix-blend-mode:multiply;filter:blur(6px);transform-origin:0 50%;animation:sway 26s ease-in-out infinite;will-change:transform}
+.frond svg{display:block;width:100%;height:auto}
+.frond.f2{animation-duration:33s;animation-delay:-9s}
+.frond.f3{animation-duration:29s;animation-delay:-17s}
+@keyframes sway{0%,100%{transform:rotate(var(--r,0deg)) translate3d(0,0,0)}50%{transform:rotate(calc(var(--r,0deg) + 3deg)) translate3d(14px,10px,0)}}
+
+/* header */
+.top{position:relative;z-index:20;padding:22px 0}
+.top-in{display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{text-decoration:none;display:flex;flex-direction:column;line-height:1}
+.brand b{font:500 1.7rem/1 var(--serif);letter-spacing:.01em}
+.brand small{font:500 .6rem/1 var(--sans);letter-spacing:.26em;text-transform:uppercase;color:var(--ink-2);margin-top:6px}
+.nav{display:none}
+.top .btn{min-height:42px;padding:0 18px;font-size:.68rem}
+@media (min-width:900px){
+  .nav{display:flex;gap:30px}
+  .nav a{font:500 .7rem/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;text-decoration:none;padding:8px 0;border-bottom:1px solid transparent;transition:border-color .3s}
+  .nav a:hover{border-color:var(--rust)}
+}
+
+/* hero */
+.hero{position:relative;grid-template-rows:auto auto;row-gap:0}
+.hero-photo{grid-column:full-start/full-end;grid-row:1;height:min(52vh,460px);position:relative}
+.hero-copy{grid-row:2;padding:34px 0 44px;position:relative;z-index:4}
+.h1{font:300 clamp(2.7rem,5.2vw,5.2rem)/.98 var(--serif);letter-spacing:-.015em;margin:18px 0 22px}
+.hero-sub{color:var(--ink-2);max-width:31em;margin:0 0 28px}
+.hero-cta{display:flex;flex-wrap:wrap;align-items:center;gap:18px 28px}
+.hero-meta{display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center;margin-top:30px;font-size:.86rem;color:var(--ink-2)}
+.hero-meta strong{font:500 1.15rem/1 var(--serif);color:var(--ink)}
+.hero-meta .star{width:14px;height:14px;color:var(--rust)}
+.hero-save{font-size:.82rem;color:var(--ink-2);margin:16px 0 0}
+.view-all{position:absolute;right:16px;bottom:16px;z-index:5;background:rgba(246,241,231,.92);color:var(--ink);font:500 .66rem/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;padding:12px 16px}
+.plate-cap{position:absolute;left:16px;bottom:18px;z-index:5;font:italic 400 1rem/1 var(--serif);color:var(--paper);text-shadow:0 1px 10px rgba(0,0,0,.35)}
+.hero .bk-wrap{grid-row:3}
+.hero>.shade{grid-column:1/-1;grid-row:1/-1}
+@media (min-width:900px){
+  .hero{grid-template-rows:1fr auto;min-height:max(640px,min(calc(100vh - 92px),860px))}
+  .hero-photo{grid-column:8/15;grid-row:1/3;height:auto;min-height:100%}
+  .hero-copy{grid-column:2/8;grid-row:1;align-self:center;padding:40px 24px 64px 0}
+  .hero .bk-wrap{grid-column:2/12;grid-row:2;align-self:end;margin-bottom:44px}
+  .view-all{top:22px;right:24px;bottom:auto}
+  .plate-cap{left:auto;right:24px;bottom:50px}
+}
+
+/* booking bar */
+.bk-wrap{position:relative;z-index:40}
+.bk{position:relative;z-index:40}
+.bk-in{position:relative;display:flex;align-items:stretch}
+.bk-brand{display:none}
+.bk-field,.bk-rate{display:none}
+.bk-lbl{display:block;font:500 .64rem/1 var(--sans);letter-spacing:.24em;text-transform:uppercase;color:var(--rust);margin-bottom:8px}
+.bk-val{display:block;font:400 1.3rem/1.1 var(--serif);color:var(--ink);white-space:nowrap}
+.bk-fine{display:block;font-size:.68rem;color:var(--ink-2);margin-top:5px;letter-spacing:.02em}
+.bk-cta{background:var(--palm);color:var(--paper);font:500 .74rem/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;padding:0 34px;transition:background .4s var(--ease)}
+.bk-cta:hover{background:var(--palm-2)}
+.bk-mob{flex:1;min-width:0;display:flex;flex-direction:column;justify-content:center;text-align:left}
+.bk-mob .m1{font:500 .62rem/1.2 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--sage)}
+.bk-mob .m2{font:400 1.15rem/1.2 var(--serif);color:var(--paper);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+@media (max-width:899.98px){
+  .bk-wrap{height:0;z-index:auto}
+  .bk{position:fixed;left:0;right:0;bottom:0;z-index:60}
+  .bk-in{background:var(--palm);padding:12px 16px calc(12px + env(safe-area-inset-bottom));gap:14px;box-shadow:0 -10px 30px rgba(31,58,46,.18)}
+  .bk-cta{background:var(--linen);color:var(--palm);padding:0 18px;min-height:48px;font-size:.68rem;letter-spacing:.16em}
+  .bk-cta:hover{background:var(--paper)}
+  body{padding-bottom:76px}
+}
+@media (min-width:900px){
+  .bk-wrap{min-height:88px}
+  .bk-mob{display:none}
+  .bk-in{background:var(--paper);box-shadow:0 34px 70px -34px rgba(31,58,46,.45),0 0 0 1px rgba(28,26,23,.06)}
+  .bk-field,.bk-rate{display:block;flex:1 1 0;text-align:left;padding:20px 28px;border-right:1px solid var(--line);min-width:0}
+  .bk-field{transition:background .3s}
+  .bk-field:hover,.bk-field[aria-expanded="true"]{background:rgba(220,225,207,.45)}
+  .bk-field .bk-val::after{content:"";display:inline-block;width:7px;height:7px;border-right:1.5px solid var(--ink-2);border-bottom:1.5px solid var(--ink-2);transform:rotate(45deg) translate(-2px,-4px);margin-left:12px}
+  .bk-rate{border-right:0}
+  .bk.stuck{position:fixed;top:0;left:0;right:0;background:rgba(237,228,211,.95);border-bottom:1px solid var(--line);animation:drop .55s var(--ease)}
+  .bk.stuck .bk-in{max-width:calc(12 * 72px + 11 * var(--gap));margin:0 auto;background:none;box-shadow:none}
+  .bk.stuck .bk-brand{display:flex;align-items:center;padding-right:28px;font:500 1.45rem/1 var(--serif);text-decoration:none;border-right:1px solid var(--line)}
+  .bk.stuck .bk-field,.bk.stuck .bk-rate{padding:13px 26px}
+  .bk.stuck .bk-lbl{margin-bottom:5px}
+  .bk.stuck .bk-val{font-size:1.15rem}
+  .bk.stuck .bk-fine{display:none}
+  .bk.stuck .bk-cta{margin:10px 0;padding:0 28px}
+}
+@media (min-width:900px) and (max-width:1180px){
+  .bk.stuck .bk-in{margin:0 24px}
+}
+@keyframes drop{from{transform:translateY(-100%)}to{transform:none}}
+
+/* booking panel */
+.bk-scrim{position:fixed;inset:0;background:rgba(28,26,23,.42);z-index:55}
+.bk-panel{background:var(--paper);color:var(--ink);z-index:70;text-align:left}
+.bkp-head{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;margin-bottom:22px}
+.bkp-title{font:400 1.75rem/1.1 var(--serif);margin:0}
+.bkp-title:focus{outline:none}
+.bkp-sub{margin:6px 0 0;font-size:.86rem;color:var(--ink-2)}
+.bkp-close{width:42px;height:42px;display:grid;place-items:center;border:1px solid var(--line);border-radius:50%;flex:0 0 auto;transition:background .3s}
+.bkp-close:hover{background:var(--sage-soft)}
+.bkp-close svg{width:16px;height:16px}
+.bkp-body{display:grid;gap:28px}
+.cal{position:relative}
+.cal-nav{position:absolute;top:-4px;left:0;right:0;display:flex;justify-content:space-between;pointer-events:none}
+.cal-nav button{pointer-events:auto;width:36px;height:36px;display:grid;place-items:center;border-radius:50%;transition:background .3s}
+.cal-nav button:hover:not(:disabled){background:var(--sage-soft)}
+.cal-nav button:disabled{opacity:.25;cursor:default}
+.cal-nav svg{width:16px;height:16px}
+.cal-months{display:grid;gap:30px}
+.cal-title{text-align:center;font:500 1.2rem/28px var(--serif);margin:0 0 14px;letter-spacing:.02em}
+.cal-dow,.cal-grid{display:grid;grid-template-columns:repeat(7,1fr)}
+.cal-dow span{text-align:center;font:500 .62rem/1 var(--sans);letter-spacing:.16em;color:var(--ink-2);padding-bottom:10px}
+.cal-day{height:42px;font-size:.9rem;position:relative;z-index:0;color:var(--ink);transition:background .2s,color .2s}
+.cal-day::before{content:"";position:absolute;inset:3px;border-radius:50%;z-index:-1;transition:background .2s}
+.cal-grid{isolation:isolate}
+.cal-day:not(:disabled):hover::before{background:var(--sage-soft)}
+.cal-day:disabled{cursor:default;color:rgba(28,26,23,.3)}
+.cal-day.is-booked{text-decoration:line-through;text-decoration-color:rgba(154,69,39,.6)}
+.cal-day.is-today::after{content:"";position:absolute;left:50%;bottom:7px;width:4px;height:4px;margin-left:-2px;border-radius:50%;background:var(--rust)}
+.cal-day.is-in,.cal-day.is-preview{background:var(--sage-soft)}
+.cal-day.is-start,.cal-day.is-end{color:var(--paper)}
+.cal-day.is-start::before,.cal-day.is-end::before{background:var(--palm)!important;inset:1px}
+.cal-day.is-start.has-range{background:linear-gradient(90deg,transparent 50%,var(--sage-soft) 50%)}
+.cal-day.is-end{background:linear-gradient(90deg,var(--sage-soft) 50%,transparent 50%)}
+.cal-msg{min-height:1.5em;margin:12px 0 0;font-size:.84rem;color:var(--rust)}
+.cal-legend{display:flex;gap:20px;font-size:.74rem;color:var(--ink-2);margin-top:6px}
+.cal-legend span{display:inline-flex;align-items:center;gap:8px}
+.cal-legend i{width:12px;height:12px;border-radius:50%;display:inline-block}
+.lg-sel{background:var(--palm)}
+.lg-bk{border:1px solid rgba(28,26,23,.3);position:relative}
+.lg-bk::after{content:"";position:absolute;left:-1px;right:-1px;top:50%;height:1px;background:var(--rust);transform:rotate(-35deg)}
+
+.side{display:flex;flex-direction:column;gap:22px}
+.guests{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:16px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.guests p{margin:0}
+.guests .g-sub{font-size:.76rem;color:var(--ink-2)}
+.step{display:flex;align-items:center;gap:14px}
+.step button{width:38px;height:38px;border:1px solid rgba(28,26,23,.3);border-radius:50%;display:grid;place-items:center;transition:background .3s}
+.step button:hover:not(:disabled){background:var(--sage-soft)}
+.step button:disabled{opacity:.3;cursor:default}
+.step svg{width:14px;height:14px}
+.step output{font:500 1.35rem/1 var(--serif);min-width:1.2em;text-align:center}
+.bd{font-size:.9rem}
+.bd-row{display:flex;justify-content:space-between;gap:16px;padding:5px 0;color:var(--ink-2)}
+.bd-row.total{color:var(--ink);border-top:1px solid var(--line);margin-top:8px;padding-top:12px;font-weight:500}
+.bd-row.total span:last-child{font:500 1.4rem/1 var(--serif)}
+.bd-empty{font-size:.88rem;color:var(--ink-2);margin:0}
+.save{background:var(--sage-soft);padding:14px 16px;font-size:.84rem;color:var(--ink-2)}
+.save strong{display:block;font:500 1.15rem/1.25 var(--serif);color:var(--palm);margin-bottom:2px}
+.req{width:100%}
+.req:disabled{background:#8E9A8E;cursor:not-allowed}
+.fine{font-size:.72rem;line-height:1.55;color:var(--ink-2);margin:0}
+.done{text-align:center;padding:24px 8px 8px}
+.done-mark{width:64px;height:64px;margin:0 auto 18px;border-radius:50%;border:1px solid var(--palm);display:grid;place-items:center;color:var(--palm)}
+.done-mark svg{width:26px;height:26px}
+.done h3{font:400 2rem/1.1 var(--serif);margin:0 0 10px}
+.done .done-sum{font:italic 400 1.25rem/1.4 var(--serif);color:var(--palm);margin:0 0 14px}
+.done p{max-width:30em;margin-left:auto;margin-right:auto}
+
+@media (max-width:899.98px){
+  .bk-panel{position:fixed;left:0;right:0;bottom:0;max-height:92vh;max-height:92dvh;overflow:auto;overscroll-behavior:contain;padding:22px 20px calc(24px + env(safe-area-inset-bottom));border-radius:18px 18px 0 0;box-shadow:0 -20px 50px rgba(28,26,23,.25);animation:sheet .45s var(--ease)}
+  .bk-panel::before{content:"";display:block;width:44px;height:4px;border-radius:2px;background:var(--sand);margin:-8px auto 16px}
+}
+@keyframes sheet{from{transform:translateY(40px);opacity:0}to{transform:none;opacity:1}}
+@media (min-width:900px){
+  .bk-scrim{display:none}
+  .bk-panel{position:absolute;right:0;bottom:calc(100% + 14px);width:min(960px,calc(100vw - 48px));max-height:calc(100vh - 190px);overflow:auto;padding:30px 34px 28px;box-shadow:0 40px 90px -30px rgba(31,58,46,.5),0 0 0 1px rgba(28,26,23,.07);animation:fade .35s var(--ease)}
+  .bk.stuck .bk-panel{bottom:auto;top:calc(100% + 1px);max-height:calc(100vh - 100px)}
+  .bkp-body{grid-template-columns:minmax(0,1fr) 290px;gap:40px}
+  .cal-months{grid-template-columns:1fr 1fr;gap:34px}
+}
+@keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+
+/* sections */
+.sec{padding:clamp(90px,11vw,170px) 0;position:relative}
+.paper{background:var(--paper)}
+
+/* 01 house */
+.house-photo{grid-column:full-start/full-end;height:min(60vh,420px);margin:6px 0 40px}
+.facts{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:36px 0 0;padding:24px 0 0;border-top:1px solid var(--line)}
+.facts div{display:flex;flex-direction:column}
+.facts dt{order:2;font:500 .64rem/1.3 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--ink-2)}
+.facts dd{order:1;margin:0;font:300 clamp(2.4rem,4vw,3.4rem)/1 var(--serif);color:var(--palm);font-variant-numeric:lining-nums;margin-bottom:6px}
+.plates{margin-top:clamp(70px,9vw,130px)}
+.plates-head{display:flex;justify-content:space-between;align-items:baseline;gap:20px;margin-bottom:20px;flex-wrap:wrap}
+.plates-head h3{font:400 1.6rem/1.2 var(--serif);margin:0}
+.plates-head p{margin:0;font-size:.82rem;color:var(--ink-2)}
+.plate-grid{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.plate-grid .ph{aspect-ratio:4/5;height:auto}
+.plate-grid figcaption{margin-top:8px;font:italic 400 .98rem/1.3 var(--serif);color:var(--ink-2)}
+.plate-grid figcaption b{font:500 .62rem/1 var(--sans);font-style:normal;letter-spacing:.2em;color:var(--rust);margin-right:8px}
+figure{margin:0}
+@media (min-width:900px){
+  .house .chap{grid-column:2/7;grid-row:1}
+  .house-photo{grid-column:1/8;grid-row:2/4;height:clamp(560px,52vw,760px);margin:0}
+  .house-copy{grid-column:9/14;grid-row:2;padding-top:70px}
+  .house-note{grid-column:9/13;grid-row:3;align-self:end;font:italic 400 1.25rem/1.45 var(--serif);color:var(--ink-2);border-left:1px solid var(--rust);padding-left:22px;margin:0}
+  .plates{grid-column:2/14}
+  .plate-grid{grid-template-columns:repeat(6,1fr);gap:16px}
+  .plate-grid li:nth-child(even){margin-top:46px}
+}
+@media (max-width:899.98px){.house-note{display:none}}
+
+/* 02 rooms */
+.rooms-head{margin-bottom:50px}
+.room{margin-bottom:60px}
+.room .ph{aspect-ratio:4/5;height:auto}
+.room-body{padding-top:24px}
+.room h3,.bath-copy h3{font:300 clamp(2rem,3vw,2.7rem)/1.05 var(--serif);margin:10px 0 14px}
+.room p:not(.lbl),.bath-copy p:not(.lbl){color:var(--ink-2);margin:0 0 14px}
+.tags{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.tags li{font-size:.76rem;padding:6px 12px;border:1px solid var(--line);border-radius:999px;color:var(--ink-2)}
+.bath-photo{grid-column:full-start/full-end;height:min(56vh,380px)}
+.bath-copy{padding-top:26px}
+@media (min-width:900px){
+  .rooms-head{grid-column:2/9}
+  .rooms-intro{grid-column:10/14;align-self:end;margin-bottom:50px}
+  .room{margin-bottom:0}
+  .room.r1{grid-column:2/8}
+  .room.r2{grid-column:9/14;margin-top:150px}
+  .room.r2 .ph{aspect-ratio:5/6}
+  .bath-copy{grid-column:2/6;align-self:center;padding:0 10px 0 0;grid-row:4}
+  .bath-photo{grid-column:7/15;height:clamp(440px,40vw,600px);grid-row:4;margin-top:130px}
+  .bath-copy{margin-top:130px}
+}
+
+/* 03 garden */
+.garden{padding-bottom:0}
+.garden-head{margin-bottom:46px}
+.garden-photo{grid-column:full-start/full-end;height:min(70vh,560px);position:relative}
+.garden-card{background:var(--paper);padding:34px 26px;position:relative;z-index:4;margin-top:-60px}
+.garden-card p:not(.lbl){color:var(--ink-2)}
+.ticks{list-style:none;margin:18px 0 0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:12px 20px}
+.ticks li{display:flex;gap:10px;align-items:center;font-size:.9rem}
+.ticks svg{width:20px;height:20px;color:var(--rust);flex:0 0 auto}
+@media (min-width:900px){
+  .garden-head{grid-column:2/11}
+  .garden-photo{height:min(92vh,900px)}
+  .garden-card{grid-column:8/14;margin-top:-260px;padding:50px 52px;box-shadow:0 30px 70px -40px rgba(31,58,46,.4)}
+}
+
+/* in residence */
+.res{background:var(--palm);color:var(--linen)}
+.res .lbl{color:var(--sage)}
+.res .h2{color:var(--paper)}
+.res .h2 em{color:var(--sage)}
+.res .lede{color:rgba(237,228,211,.82)}
+.res .frond{color:#000;opacity:.28}
+.amen{list-style:none;margin:40px 0 0;padding:0;display:grid;grid-template-columns:1fr;border-top:1px solid rgba(237,228,211,.16)}
+.amen li{display:flex;gap:16px;align-items:flex-start;padding:18px 0;border-bottom:1px solid rgba(237,228,211,.16)}
+.amen svg{width:26px;height:26px;color:var(--sage);flex:0 0 auto;margin-top:2px}
+.amen b{display:block;font:400 1.3rem/1.2 var(--serif);color:var(--paper)}
+.amen span{font-size:.84rem;color:rgba(237,228,211,.72)}
+.res-in{position:relative;z-index:4}
+@media (min-width:600px){.amen{grid-template-columns:1fr 1fr;column-gap:36px}}
+@media (min-width:900px){
+  .res-intro{grid-column:2/6;align-self:start;position:sticky;top:120px}
+  .amen{grid-column:7/14;margin:0}
+}
+
+/* 04 neighborhood */
+.hood-copy{margin-bottom:40px}
+.times{margin:28px 0 0;padding:0}
+.times div{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:12px 0;border-bottom:1px solid var(--line)}
+.times dt{font:400 1.25rem/1.2 var(--serif)}
+.times dd{margin:0;font-size:.78rem;letter-spacing:.06em;color:var(--ink-2);text-align:right}
+.times .approx{font-size:.7rem;color:var(--ink-2);opacity:.85}
+.map{background:var(--paper);padding:14px;box-shadow:0 30px 60px -40px rgba(31,58,46,.35)}
+.map svg{display:block;width:100%;height:auto}
+.map figcaption{font-size:.74rem;color:var(--ink-2);padding:10px 4px 2px}
+.m-ring{fill:none;stroke:var(--palm);stroke-opacity:.28;stroke-dasharray:2 6}
+.m-ringlbl{font:500 9.5px var(--sans);letter-spacing:.18em;text-transform:uppercase;fill:var(--palm);fill-opacity:.7}
+.m-name{font:500 17px var(--serif);fill:var(--ink)}
+.m-time{font:500 8.8px var(--sans);letter-spacing:.14em;text-transform:uppercase;fill:var(--ink-2)}
+.m-dot{fill:var(--palm)}
+.m-street{stroke:var(--cognac);stroke-width:2;stroke-opacity:.55}
+.m-streetlbl{font:italic 400 13px var(--serif);fill:var(--cognac)}
+.m-bay{font:italic 400 15px var(--serif);fill:var(--palm);fill-opacity:.55}
+.m-home{font:italic 500 19px var(--serif);fill:var(--rust)}
+@media (min-width:900px){
+  .hood .chap{grid-column:2/7}
+  .hood-copy{grid-column:2/7;margin:0}
+  .map{grid-column:8/14;grid-row:1/3;align-self:start}
+}
+
+/* reviews */
+.score{display:flex;align-items:flex-end;gap:14px;margin:6px 0 4px}
+.score b{font:300 clamp(5.5rem,10vw,8.6rem)/.8 var(--serif);color:var(--palm);letter-spacing:-.02em}
+.score span{font-size:.86rem;color:var(--ink-2);padding-bottom:8px}
+.badges{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0 30px}
+.badges li{list-style:none;font:500 .66rem/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;padding:9px 12px;background:var(--sage-soft);color:var(--palm)}
+.badges{padding:0}
+.cats{margin:0;padding:0}
+.cats div{display:grid;grid-template-columns:1fr auto;gap:6px 16px;padding:9px 0}
+.cats dt{font-size:.86rem}
+.cats dd{margin:0;font:500 1.05rem/1 var(--serif)}
+.cats .bar{grid-column:1/-1;height:2px;background:var(--sand);position:relative}
+.cats .bar i{position:absolute;inset:0 auto 0 0;background:var(--palm)}
+.quotes{position:relative;margin-top:60px}
+.q-mark{font:italic 300 9rem/.6 var(--serif);color:var(--rust);display:block;height:58px;margin-bottom:10px}
+.q-slide{margin:0}
+.q-slide[hidden]{display:none}
+.q-slide blockquote{margin:0;font:italic 300 clamp(1.75rem,2.9vw,2.75rem)/1.22 var(--serif);color:var(--ink)}
+.q-slide figcaption{margin-top:24px;font:500 .7rem/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--ink-2)}
+.q-ctrl{display:flex;align-items:center;gap:16px;margin-top:36px}
+.q-ctrl button{width:46px;height:46px;border:1px solid rgba(28,26,23,.3);border-radius:50%;display:grid;place-items:center;transition:background .3s}
+.q-ctrl button:hover{background:var(--sage-soft)}
+.q-ctrl svg{width:16px;height:16px}
+.q-count{font:italic 400 1.1rem/1 var(--serif);color:var(--ink-2);min-width:3em}
+.q-note{font-size:.74rem;color:var(--ink-2);margin:18px 0 0}
+.js .q-slide.enter{animation:qin .9s var(--ease)}
+@keyframes qin{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+@media (min-width:900px){
+  .rev-score{grid-column:2/6}
+  .quotes{grid-column:7/14;margin-top:0;padding-top:20px}
+}
+
+/* host */
+.host-mono{width:min(62vw,300px);aspect-ratio:1;border-radius:50%;background:var(--palm);color:var(--linen);display:grid;place-items:center;font:italic 300 clamp(7rem,14vw,10rem)/1 var(--serif);position:relative;margin-bottom:40px}
+.host-mono::after{content:"";position:absolute;inset:-14px;border-radius:50%;border:1px solid var(--rust);opacity:.5}
+.host-mono span{transform:translateY(-6%)}
+.host-stats{list-style:none;margin:28px 0 32px;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:18px 26px}
+.host-stats b{display:block;font:400 1.6rem/1.1 var(--serif);color:var(--palm)}
+.host-stats span{font-size:.78rem;color:var(--ink-2)}
+@media (min-width:900px){
+  .host-mono{grid-column:3/7;align-self:center;justify-self:center;margin:0}
+  .host-copy{grid-column:8/14}
+  .host-stats{grid-template-columns:repeat(3,1fr)}
+}
+
+/* good to know */
+.know{border-top:1px solid var(--line)}
+.know h3{font:400 1.5rem/1.2 var(--serif);margin:0 0 14px}
+.kv{margin:0 0 40px;padding:0}
+.kv div{display:flex;justify-content:space-between;gap:16px;padding:11px 0;border-bottom:1px solid var(--line);font-size:.92rem}
+.kv dt{color:var(--ink-2)}
+.kv dd{margin:0;text-align:right}
+.faq details{border-bottom:1px solid var(--line)}
+.faq details:first-of-type{border-top:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:20px 0;font:400 1.3rem/1.25 var(--serif)}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"";width:12px;height:12px;flex:0 0 auto;background:linear-gradient(var(--rust),var(--rust)) center/100% 1.5px no-repeat,linear-gradient(var(--rust),var(--rust)) center/1.5px 100% no-repeat;transition:transform .35s var(--ease)}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq details p{color:var(--ink-2);margin:0 0 22px;max-width:36em}
+@media (min-width:900px){
+  .know-head{grid-column:2/7}
+  .know-a{grid-column:2/7}
+  .faq{grid-column:8/14;grid-row:1/3}
+}
+
+/* footer */
+.foot{background:var(--palm);color:var(--linen);padding:90px 0 40px;position:relative;overflow:hidden}
+.foot .foot-brand{font:300 clamp(3.4rem,9vw,7.5rem)/.9 var(--serif);margin:0 0 20px;color:var(--paper)}
+.foot-brand em{color:var(--sage)}
+.foot p{color:rgba(237,228,211,.78);font-size:.9rem}
+.foot .lbl{color:var(--sage);margin-bottom:12px}
+.foot-cols{display:grid;gap:30px;margin-top:40px}
+.foot-cols a{text-decoration:none;border-bottom:1px solid rgba(237,228,211,.35)}
+.foot-cols a:hover{border-color:var(--linen)}
+.foot-base{margin-top:60px;padding-top:22px;border-top:1px solid rgba(237,228,211,.16);display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;font-size:.76rem;color:rgba(237,228,211,.7)}
+.foot-base a{color:var(--linen)}
+@media (min-width:900px){
+  .foot-cols{grid-template-columns:repeat(3,1fr)}
+}
+
+/* lightbox */
+.lb{position:fixed;inset:0;z-index:90;background:rgba(20,30,24,.94);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:60px 16px 24px}
+.lb[hidden]{display:none}
+.lb figure{max-width:min(1200px,100%);width:100%;display:flex;flex-direction:column;align-items:center}
+.lb img{max-height:calc(100vh - 170px);width:auto;max-width:100%;object-fit:contain}
+.lb figcaption{color:var(--linen);margin-top:14px;font:italic 400 1.15rem/1.3 var(--serif);text-align:center}
+.lb figcaption span{font:500 .64rem/1 var(--sans);font-style:normal;letter-spacing:.2em;color:var(--sage);margin-right:10px}
+.lb-btn{position:absolute;width:48px;height:48px;border-radius:50%;border:1px solid rgba(237,228,211,.35);color:var(--linen);display:grid;place-items:center;transition:background .3s}
+.lb-btn:hover{background:rgba(237,228,211,.12)}
+.lb-btn svg{width:18px;height:18px}
+.lb-close{top:14px;right:16px}
+.lb-prev{left:16px;top:50%;margin-top:-24px}
+.lb-next{right:16px;top:50%;margin-top:-24px}
+@media (max-width:899.98px){
+  .lb-prev,.lb-next{top:auto;bottom:18px;margin:0}
+  .lb{padding-bottom:84px}
+}
+
+/* reveal */
+.js .rv{opacity:0;transform:translateY(22px);transition:opacity 1.2s var(--ease),transform 1.2s var(--ease)}
+.js .rv.in{opacity:1;transform:none}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .frond{animation:none}
+  .js .rv{opacity:1;transform:none;transition:none}
+  .ph img,.bk.stuck,.bk-panel,.js .q-slide.enter{transition:none;animation:none}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="frond" viewBox="-10 -230 560 440"><path fill="currentColor" d="M0 -3 Q230 -98 520 -10 Q230 -92 0 3Z M32 -12 Q48 -60 44 -111 Q35 -62 32 -12Z M32 -12 Q60 54 112 104 Q76 43 32 -12Z M47 -17 Q67 -74 65 -134 Q53 -76 47 -17Z M47 -17 Q80 61 140 122 Q97 50 47 -17Z M62 -22 Q87 -87 88 -157 Q71 -90 62 -22Z M62 -22 Q101 69 168 142 Q119 57 62 -22Z M77 -26 Q108 -100 113 -180 Q91 -104 77 -26Z M77 -26 Q121 79 197 164 Q142 66 77 -26Z M92 -30 Q122 -95 129 -166 Q107 -99 92 -30Z M92 -30 Q129 64 197 140 Q149 52 92 -30Z M107 -34 Q143 -105 154 -185 Q127 -111 107 -34Z M107 -34 Q149 73 224 160 Q170 60 107 -34Z M122 -37 Q165 -116 181 -204 Q148 -122 122 -37Z M122 -37 Q169 82 250 181 Q191 69 122 -37Z M137 -40 Q177 -105 193 -180 Q162 -111 137 -40Z M137 -40 Q175 63 244 147 Q196 51 137 -40Z M152 -42 Q199 -113 220 -195 Q183 -120 152 -42Z M152 -42 Q194 71 269 165 Q216 58 152 -42Z M168 -44 Q221 -120 247 -207 Q204 -128 168 -44Z M168 -44 Q212 79 292 182 Q235 66 168 -44Z M184 -46 Q243 -125 275 -218 Q225 -134 184 -46Z M184 -46 Q230 86 314 198 Q255 73 184 -46Z M199 -48 Q251 -110 280 -187 Q236 -119 199 -48Z M199 -48 Q235 63 305 155 Q257 51 199 -48Z M215 -49 Q273 -114 306 -193 Q257 -123 215 -49Z M215 -49 Q253 68 326 167 Q276 57 215 -49Z M231 -50 Q293 -115 332 -197 Q278 -126 231 -50Z M231 -50 Q270 73 344 177 Q293 61 231 -50Z M247 -50 Q300 -100 332 -165 Q287 -110 247 -50Z M247 -50 Q276 49 336 132 Q297 39 247 -50Z M264 -50 Q319 -100 355 -166 Q306 -111 264 -50Z M264 -50 Q292 52 353 139 Q313 42 264 -50Z M280 -50 Q338 -99 377 -164 Q325 -110 280 -50Z M280 -50 Q308 54 369 142 Q330 44 280 -50Z M296 -49 Q356 -96 396 -160 Q343 -107 296 -49Z M296 -49 Q323 54 383 142 Q345 44 296 -49Z M313 -48 Q361 -82 393 -131 Q350 -92 313 -48Z M313 -48 Q331 32 379 100 Q350 24 313 -48Z M330 -47 Q377 -78 410 -125 Q367 -88 330 -47Z M330 -47 Q347 31 392 97 Q365 23 330 -47Z M346 -45 Q392 -73 424 -116 Q383 -83 346 -45Z M346 -45 Q361 28 404 90 Q379 21 346 -45Z M363 -43 Q399 -61 422 -94 Q391 -71 363 -43Z M363 -43 Q372 12 405 57 Q388 5 363 -43Z M380 -41 Q413 -55 434 -84 Q405 -64 380 -41Z M380 -41 Q387 8 416 47 Q402 2 380 -41Z M397 -38 Q425 -49 442 -72 Q418 -57 397 -38Z M397 -38 Q401 2 427 35 Q415 -3 397 -38Z M415 -35 Q436 -41 448 -59 Q430 -49 415 -35Z M415 -35 Q415 -5 436 18 Q428 -10 415 -35Z M432 -32 Q447 -34 455 -47 Q442 -41 432 -32Z M432 -32 Q430 -10 446 4 Q442 -15 432 -32Z M450 -28 Q465 -30 473 -43 Q460 -37 450 -28Z M450 -28 Q447 -7 463 8 Q459 -11 450 -28Z M467 -24 Q483 -25 491 -38 Q478 -33 467 -24Z M467 -24 Q465 -3 481 12 Q477 -7 467 -24Z M485 -20 Q501 -20 510 -33 Q496 -28 485 -20Z M485 -20 Q482 2 498 17 Q494 -2 485 -20Z M503 -15 Q518 -15 528 -28 Q514 -23 503 -15Z M503 -15 Q500 7 516 22 Q512 2 503 -15Z"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.8l2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9z"/></symbol>
+    <symbol id="i-left" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" d="M15 4l-8 8 8 8"/></symbol>
+    <symbol id="i-right" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" d="M9 4l8 8-8 8"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" d="M5 5l14 14M19 5L5 19"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" d="M4 12.5l5 5L20 6.5"/></symbol>
+  </defs>
+</svg>
+
+<header class="top g">
+  <div class="top-in">
+    <a class="brand" href="#main"><b>Casa Ocho</b><small>Little Havana · Miami</small></a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#house">The House</a>
+      <a href="#rooms">Rooms</a>
+      <a href="#garden">Garden</a>
+      <a href="#neighborhood">Neighborhood</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#know">Good to know</a>
+    </nav>
+    <button class="btn" type="button" data-book="dates" aria-controls="bkPanel" aria-expanded="false">Book direct</button>
+  </div>
+</header>
+
+<main id="main">
+<section class="hero g" aria-labelledby="heroTitle">
+  <div class="hero-photo">
+    <button class="ph" type="button" data-lb="0" aria-label="Open photo 1 of 6: the living room">
+      <img src="../assets/img/photo-1.jpg" width="1440" height="961" alt="Bright living room with a cognac leather sofa, a patterned rug and the open white kitchen behind it" fetchpriority="high">
+    </button>
+    <span class="plate-cap" aria-hidden="true">The living room</span>
+    <button class="view-all" type="button" data-lb="0">View all 6 photos</button>
+  </div>
+  <div class="shade" aria-hidden="true">
+    <span class="frond" style="width:min(1000px,140vw);left:38%;top:-160px;--r:14deg"><svg><use href="#frond"/></svg></span>
+    <span class="frond f2" style="width:min(720px,110vw);right:-260px;bottom:8%;--r:200deg"><svg><use href="#frond"/></svg></span>
+    <span class="frond f3" style="width:min(620px,90vw);left:-220px;bottom:-80px;--r:-24deg;opacity:.1"><svg><use href="#frond"/></svg></span>
+  </div>
+
+  <div class="hero-copy">
+    <p class="lbl">A private house in Little Havana, Miami</p>
+    <h1 class="h1" id="heroTitle">A house <em>of your own,</em> a short walk from Calle Ocho.</h1>
+    <p class="hero-sub">Two bedrooms for up to six guests, a private garden with a grill, and parking in the driveway. Newly renovated, hotel quality, and entirely yours.</p>
+    <div class="hero-cta">
+      <button class="btn" type="button" data-book="dates" aria-controls="bkPanel" aria-expanded="false">Book direct</button>
+      <a class="btn-line" href="#house">Tour the house</a>
+    </div>
+    <p class="hero-save">Booking here skips the Airbnb service fee. Same house, same host.</p>
+    <div class="hero-meta">
+      <svg class="star" aria-hidden="true"><use href="#i-star"/></svg>
+      <strong>4.99</strong><span>106 reviews</span><span aria-hidden="true">·</span><span>Guest favorite, top 5% of homes on Airbnb</span>
+    </div>
+  </div>
+
+  <div class="bk-wrap" id="bkWrap">
+    <div class="bk" id="bk">
+      <div class="bk-in">
+        <a class="bk-brand" href="#main">Casa Ocho</a>
+        <button class="bk-field" type="button" data-book="dates" aria-controls="bkPanel" aria-expanded="false">
+          <span class="bk-lbl">Dates</span><span class="bk-val" id="bkDatesVal">Add your dates</span>
+        </button>
+        <button class="bk-field" type="button" data-book="guests" aria-controls="bkPanel" aria-expanded="false">
+          <span class="bk-lbl">Guests</span><span class="bk-val" id="bkGuestsVal">2 guests</span>
+        </button>
+        <div class="bk-rate">
+          <span class="bk-lbl">Your rate</span><span class="bk-val" id="bkRateVal">From $185 a night</span><span class="bk-fine">Sample rates · no booking fees</span>
+        </div>
+        <div class="bk-mob" aria-live="polite">
+          <span class="m1">Casa Ocho · 4.99 rating</span>
+          <span class="m2" id="bkMobVal">From $185 a night</span>
+        </div>
+        <button class="bk-cta" type="button" data-book="dates" aria-controls="bkPanel" aria-expanded="false">Check availability</button>
+
+        <div class="bk-panel" id="bkPanel" role="dialog" aria-labelledby="bkTitle" hidden>
+          <div class="bkp-head">
+            <div>
+              <h2 class="bkp-title" id="bkTitle" tabindex="-1">Your stay at Casa Ocho</h2>
+              <p class="bkp-sub" id="bkSub">Select your check-in date</p>
+            </div>
+            <button class="bkp-close" type="button" id="bkClose" aria-label="Close booking"><svg aria-hidden="true"><use href="#i-x"/></svg></button>
+          </div>
+
+          <div class="bkp-body" id="bkForm">
+            <div class="cal">
+              <div class="cal-nav">
+                <button type="button" id="calPrev" aria-label="Previous month"><svg aria-hidden="true"><use href="#i-left"/></svg></button>
+                <button type="button" id="calNext" aria-label="Next month"><svg aria-hidden="true"><use href="#i-right"/></svg></button>
+              </div>
+              <div class="cal-months" id="calMonths"></div>
+              <p class="cal-msg" id="calMsg" aria-live="polite"></p>
+              <div class="cal-legend"><span><i class="lg-sel"></i>Your dates</span><span><i class="lg-bk"></i>Booked</span><span>2 night minimum</span></div>
+            </div>
+
+            <div class="side">
+              <div class="guests">
+                <div><p>Guests</p><p class="g-sub">Up to 6 · 2 bedrooms, 3 beds</p></div>
+                <div class="step">
+                  <button type="button" id="gMinus" aria-label="Remove a guest"><svg aria-hidden="true" viewBox="0 0 24 24"><path stroke="currentColor" stroke-width="1.5" d="M5 12h14"/></svg></button>
+                  <output id="gCount" aria-live="polite" aria-label="Guests">2</output>
+                  <button type="button" id="gPlus" aria-label="Add a guest"><svg aria-hidden="true" viewBox="0 0 24 24"><path stroke="currentColor" stroke-width="1.5" d="M5 12h14M12 5v14"/></svg></button>
+                </div>
+              </div>
+              <div class="bd" id="bkBreak" aria-live="polite">
+                <p class="bd-empty">Choose your dates to see the full price. Sunday to Thursday nights are $185, Friday and Saturday nights $225.</p>
+              </div>
+              <div class="save" id="bkSave" hidden></div>
+              <button class="btn req" type="button" id="bkRequest" disabled>Request to book</button>
+              <p class="fine">Sample rates for this preview. Cleaning fee $95, taxes 13%. Airbnb comparison assumes its guest service fee of about 14%. You won't be charged.</p>
+            </div>
+          </div>
+
+          <div class="done" id="bkDone" hidden>
+            <div class="done-mark" aria-hidden="true"><svg><use href="#i-check"/></svg></div>
+            <h3 id="doneTitle" tabindex="-1">Request received</h3>
+            <p class="done-sum" id="doneSum"></p>
+            <p class="fine">This is a design preview: nothing was sent and no payment was taken. On the live site, Alex replies to booking requests within an hour.</p>
+            <p style="margin-top:22px"><button class="btn-line" type="button" id="doneBack">Change dates</button></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="bk-scrim" id="bkScrim" hidden></div>
+
+<section class="sec house g" id="house" aria-labelledby="houseTitle">
+  <p class="chap rv"><span class="chap-n">01</span><span class="chap-t">The House</span></p>
+  <div class="house-photo rv">
+    <button class="ph" type="button" data-lb="1" aria-label="Open photo 2 of 6: the kitchen">
+      <img src="../assets/img/photo-2.jpg" width="1440" height="961" loading="lazy" alt="White shaker kitchen with a large island, glass globe pendants, wood stools and warm oak floors">
+    </button>
+  </div>
+  <div class="house-copy rv">
+    <h2 class="h2" id="houseTitle">Hotel calm, with a front door <em>of your own.</em></h2>
+    <p class="lede">Casa Ocho is a private unit in a duplex on a quiet residential street in Little Havana. It was renovated top to bottom: a white shaker kitchen, warm oak floors, a cognac leather sofa, and bedrooms in sage, rust and coral.</p>
+    <p class="lede">You have your own entrance, a private backyard and a parking spot in the driveway. Nothing is shared.</p>
+    <dl class="facts">
+      <div><dt>Guests</dt><dd>6</dd></div>
+      <div><dt>Bedrooms</dt><dd>2</dd></div>
+      <div><dt>Beds</dt><dd>3</dd></div>
+      <div><dt>Bath</dt><dd>1</dd></div>
+    </dl>
+  </div>
+  <p class="house-note rv">A full kitchen with a coffee station, a washer and dryer, fast WiFi and a real desk. Made for a long weekend or a long stay.</p>
+
+  <div class="plates">
+    <div class="plates-head">
+      <h3>The house in six photographs</h3>
+      <p>Select any photo to view it larger.</p>
+    </div>
+    <ul class="plate-grid">
+      <li class="rv"><figure><button class="ph" type="button" data-lb="0" aria-label="Open photo 1 of 6: the living room"><img src="../assets/img/photo-1.jpg" width="1440" height="961" loading="lazy" alt="Living room with cognac leather sofa"></button><figcaption><b>I</b>Living room</figcaption></figure></li>
+      <li class="rv"><figure><button class="ph" type="button" data-lb="1" aria-label="Open photo 2 of 6: the kitchen"><img src="../assets/img/photo-2.jpg" width="1440" height="961" loading="lazy" alt="Kitchen with white island and globe pendants"></button><figcaption><b>II</b>Kitchen</figcaption></figure></li>
+      <li class="rv"><figure><button class="ph" type="button" data-lb="2" aria-label="Open photo 3 of 6: the backyard"><img src="../assets/img/photo-3.jpg" width="1440" height="961" loading="lazy" alt="Backyard dining table under an umbrella"></button><figcaption><b>III</b>Garden</figcaption></figure></li>
+      <li class="rv"><figure><button class="ph" type="button" data-lb="3" aria-label="Open photo 4 of 6: bedroom 1"><img src="../assets/img/photo-4.jpg" width="1440" height="961" loading="lazy" alt="Bedroom 1 with a queen bed and rust curtains"></button><figcaption><b>IV</b>Bedroom 1</figcaption></figure></li>
+      <li class="rv"><figure><button class="ph" type="button" data-lb="4" aria-label="Open photo 5 of 6: the bathroom"><img src="../assets/img/photo-5.jpg" width="1440" height="961" loading="lazy" alt="Bathroom with a walk-in glass shower"></button><figcaption><b>V</b>Bath</figcaption></figure></li>
+      <li class="rv"><figure><button class="ph" type="button" data-lb="5" aria-label="Open photo 6 of 6: bedroom 2"><img src="../assets/img/photo-6.jpg" width="1440" height="961" loading="lazy" alt="Bedroom 2 with two double beds"></button><figcaption><b>VI</b>Bedroom 2</figcaption></figure></li>
+    </ul>
+  </div>
+</section>
+
+<section class="sec paper rooms g" id="rooms" aria-labelledby="roomsTitle">
+  <div class="rooms-head rv">
+    <p class="chap"><span class="chap-n">02</span><span class="chap-t">The Rooms</span></p>
+    <h2 class="h2" id="roomsTitle">Two bedrooms, three beds, <em>one beautiful bath.</em></h2>
+  </div>
+  <p class="rooms-intro lede rv">Both bedrooms have smart TVs and their own calm palette, rust and sage in one, coral in the other. Sleeps six in comfort.</p>
+
+  <article class="room r1 rv" aria-labelledby="r1Title">
+    <button class="ph" type="button" data-lb="3" aria-label="Open photo 4 of 6: bedroom 1">
+      <img src="../assets/img/photo-4.jpg" width="1440" height="961" loading="lazy" alt="Bedroom 1: a queen bed with sage and orange pillows, rattan lamps, rust velvet curtains and framed palm prints">
+    </button>
+    <div class="room-body">
+      <p class="lbl">Bedroom 1</p>
+      <h3 id="r1Title">One queen bed</h3>
+      <p>Rust velvet curtains, sage pillows, rattan lamps on wooden nightstands and a pair of palm prints over the bed.</p>
+      <ul class="tags"><li>Queen bed</li><li>Smart TV</li><li>Garden window</li></ul>
+    </div>
+  </article>
+
+  <article class="room r2 rv" aria-labelledby="r2Title">
+    <button class="ph" type="button" data-lb="5" aria-label="Open photo 6 of 6: bedroom 2">
+      <img src="../assets/img/photo-6.jpg" width="1440" height="961" loading="lazy" alt="Bedroom 2: two double beds with coral pillows, a ceiling fan and a vintage Miami Florida travel poster">
+    </button>
+    <div class="room-body">
+      <p class="lbl">Bedroom 2</p>
+      <h3 id="r2Title">Two double beds</h3>
+      <p>Coral pillows, a ceiling fan and a vintage Miami travel poster. Easy for friends, siblings or kids.</p>
+      <ul class="tags"><li>2 double beds</li><li>Smart TV</li><li>Ceiling fan</li></ul>
+    </div>
+  </article>
+
+  <div class="bath-copy rv">
+    <p class="lbl">The bath</p>
+    <h3>A walk-in shower in white tile</h3>
+    <p>Glass walk-in shower with a rain head and hand shower, matte black fixtures and floating wood shelves.</p>
+    <ul class="tags"><li>Walk-in shower</li><li>Fully renovated</li></ul>
+  </div>
+  <div class="bath-photo rv">
+    <button class="ph" type="button" data-lb="4" aria-label="Open photo 5 of 6: the bathroom">
+      <img src="../assets/img/photo-5.jpg" width="1440" height="961" loading="lazy" alt="Bathroom with white subway tile, a walk-in glass shower with black fixtures and floating wood shelves">
+    </button>
+  </div>
+</section>
+
+<section class="sec garden g" id="garden" aria-labelledby="gardenTitle">
+  <div class="garden-head rv">
+    <p class="chap"><span class="chap-n">03</span><span class="chap-t">The Garden</span></p>
+    <h2 class="h2" id="gardenTitle">Dinner outside, <em>under the string lights.</em></h2>
+  </div>
+  <div class="garden-photo">
+    <button class="ph" type="button" data-lb="2" aria-label="Open photo 3 of 6: the backyard">
+      <img src="../assets/img/photo-3.jpg" width="1440" height="961" loading="lazy" alt="Private backyard with a wood dining table for six under a tan umbrella, a covered Weber grill, string lights and a tall green hedge">
+    </button>
+    <div class="shade" aria-hidden="true">
+      <span class="frond f3" style="width:900px;left:-200px;top:-80px;--r:12deg"><svg><use href="#frond"/></svg></span>
+      <span class="frond" style="width:700px;right:-220px;top:30%;--r:190deg"><svg><use href="#frond"/></svg></span>
+    </div>
+  </div>
+  <div class="garden-card rv">
+    <p class="lbl">Private backyard</p>
+    <p style="margin-top:14px">The backyard is yours alone. Light the Weber, set the table for six under the umbrella, and stay out after dark when the string lights come on. A tall green hedge keeps it private.</p>
+    <ul class="ticks">
+      <li><svg aria-hidden="true"><use href="#i-check"/></svg>Table for six</li>
+      <li><svg aria-hidden="true"><use href="#i-check"/></svg>Weber grill</li>
+      <li><svg aria-hidden="true"><use href="#i-check"/></svg>String lights</li>
+      <li><svg aria-hidden="true"><use href="#i-check"/></svg>Nothing shared</li>
+    </ul>
+  </div>
+</section>
+
+<section class="sec res" id="residence" aria-labelledby="resTitle">
+  <div class="shade" aria-hidden="true">
+    <span class="frond f2" style="width:980px;left:-280px;top:-160px;--r:22deg"><svg><use href="#frond"/></svg></span>
+    <span class="frond f3" style="width:760px;right:-300px;bottom:-120px;--r:196deg"><svg><use href="#frond"/></svg></span>
+  </div>
+  <div class="g res-in">
+    <div class="res-intro rv">
+      <p class="lbl">In residence</p>
+      <h2 class="h2" id="resTitle" style="margin-top:20px">Everything a <em>longer stay</em> asks for.</h2>
+      <p class="lede">The comforts of a good hotel and the practical things a home has. All of it inside the unit, all of it yours.</p>
+    </div>
+    <ul class="amen">
+      <li><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M4 11h16v5a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4z"/><path d="M2 11h20M9 8V5M15 8V5M12 8V4"/></svg><div><b>Full kitchen</b><span>Cookware, appliances, island seating</span></div></li>
+      <li><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M5 9h11v5a5 5 0 0 1-5 5h-1a5 5 0 0 1-5-5z"/><path d="M16 11h1.5a2.5 2.5 0 0 1 0 5H16M8.5 3.5c-.8 1 .8 2 0 3.5M12.5 3.5c-.8 1 .8 2 0 3.5"/></svg><div><b>Coffee station</b><span>For slow mornings</span></div></li>
+      <li><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="5" y="3" width="14" height="18" rx="1.5"/><path d="M5 7h14M8 5h1"/><circle cx="12" cy="14" r="4"/></svg><div><b>Washer and dryer</b><span>In the unit</span></div></li>
+      <li><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M2.5 9a14 14 0 0 1 19 0M5.5 12.5a9.5 9.5 0 0 1 13 0M8.8 16a5 5 0 0 1 6.4 0"/><circle cx="12" cy="19" r=".9" fill="currentColor"/></svg><div><b>Fast WiFi</b><span>Fine for video calls</span></div></li>
+      <li><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="4" y="5" width="16" height="11" rx="1"/><path d="M2 19h20"/></svg><div><b>Dedicated workspace</b><span>A desk of its own</span></div></li>
+      <li><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="3" y="5" width="18" height="12" rx="1"/><path d="M8 21h8M12 17v4"/></svg><div><b>Smart TVs</b><span>Living room and both bedrooms</span></div></li>
+      <li><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 21v-8"/><path d="M12 13c-4.5 0-7-3.5-7-8.5 4.5 0 7 3 7 7.5 0-4.5 2.5-7.5 7-7.5 0 5-2.5 8.5-7 8.5z"/></svg><div><b>Private backyard</b><span>Dining for six, string lights</span></div></li>
+      <li><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M4 10h16a8 8 0 0 1-16 0z"/><path d="M8.5 17.5L6.5 22M15.5 17.5l2 4.5M9 3c-.9 1 .9 2 0 4M13 3c-.9 1 .9 2 0 4"/></svg><div><b>BBQ grill</b><span>A Weber, ready to go</span></div></li>
+      <li><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M10 17V7h3a3 3 0 0 1 0 6h-3"/></svg><div><b>Driveway parking</b><span>One private spot</span></div></li>
+      <li><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M5 15v-4l2-5h10l2 5v4M5 11h14"/><rect x="3" y="15" width="18" height="3.5" rx="1"/><path d="M7 18.5V21M17 18.5V21"/></svg><div><b>Free street parking</b><span>For a second car</span></div></li>
+      <li><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M6 21V3h12v18M3 21h18"/><circle cx="14.5" cy="12" r=".9" fill="currentColor"/></svg><div><b>Own entrance</b><span>No shared spaces</span></div></li>
+      <li><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="11" cy="4.5" r="1.6"/><path d="M11 7.5v6h5l2 5"/><path d="M8 10.5a6 6 0 1 0 7.6 8.2"/></svg><div><b>Accessible arrival</b><span>Accessible entrance and parking, disabled spot</span></div></li>
+      <li><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="4" y="3" width="16" height="18" rx="1"/><path d="M12 3v18M4 12h16"/></svg><div><b>Garden view</b><span>Green outside the windows</span></div></li>
+      <li><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg><div><b>Quiet street</b><span>Safe and residential</span></div></li>
+    </ul>
+  </div>
+</section>
+
+<section class="sec hood g" id="neighborhood" aria-labelledby="hoodTitle">
+  <p class="chap rv"><span class="chap-n">04</span><span class="chap-t">The Neighborhood</span></p>
+  <div class="hood-copy rv">
+    <h2 class="h2" id="hoodTitle">Little Havana on foot, <em>Miami in ten minutes.</em></h2>
+    <p class="lede">Little Havana is Miami's Cuban heart: ventanitas pouring cafecito, domino games in Máximo Gómez Park, cigar shops and live music along Calle Ocho. The house sits on a quiet street about fifteen minutes away on foot, close enough to walk to breakfast and far enough to sleep well.</p>
+    <dl class="times">
+      <div><dt>Calle Ocho</dt><dd>15 min walk</dd></div>
+      <div><dt>Brickell</dt><dd>Under 10 min drive</dd></div>
+      <div><dt>Downtown</dt><dd>Under 10 min drive</dd></div>
+      <div><dt>Wynwood</dt><dd>Under 10 min drive</dd></div>
+      <div><dt>Coral Gables</dt><dd>Under 10 min drive</dd></div>
+      <div><dt>Coconut Grove</dt><dd>A short drive</dd></div>
+      <div><dt>Miami International Airport</dt><dd>About 15 min drive <span class="approx">(approx.)</span></dd></div>
+      <div><dt>South Beach</dt><dd>About 20 min drive <span class="approx">(approx.)</span></dd></div>
+    </dl>
+  </div>
+  <figure class="map rv">
+    <svg viewBox="0 0 600 560" role="img" aria-labelledby="mapTitle">
+      <title id="mapTitle">Stylized map: Casa Ocho in Little Havana, a 15 minute walk to Calle Ocho, under 10 minutes by car to Brickell, Downtown, Wynwood and Coral Gables, with the airport and South Beach farther out.</title>
+      <rect width="600" height="560" fill="#F1EADC"/>
+      <path d="M600 0H468c26 70 6 140 22 220s-18 160 8 240c12 40 6 100 6 100h96z" fill="#DCE1CF"/>
+      <path d="M556 96c12 90 14 200 8 330l14 2c6-130 4-240-8-334z" fill="#F1EADC"/>
+      <text class="m-bay" x="508" y="470" transform="rotate(-82 508 470)">Biscayne Bay</text>
+      <circle class="m-ring" cx="280" cy="290" r="70"/>
+      <circle class="m-ring" cx="280" cy="290" r="170"/>
+      <circle class="m-ring" cx="280" cy="290" r="262"/>
+      <text class="m-ringlbl" x="280" y="213" text-anchor="middle">15 min walk</text>
+      <text class="m-ringlbl" x="280" y="113" text-anchor="middle">10 min drive</text>
+      <text class="m-ringlbl" x="280" y="21" text-anchor="middle">20 min drive</text>
+      <line class="m-street" x1="20" y1="338" x2="470" y2="338"/>
+      <text class="m-streetlbl" x="34" y="358">SW 8th Street, Calle Ocho</text>
+      <circle class="m-dot" cx="236" cy="338" r="5"/>
+      <text class="m-name" x="228" y="326" text-anchor="end">Calle Ocho</text>
+      <circle class="m-dot" cx="420" cy="322" r="5"/>
+      <text class="m-name" x="430" y="318">Brickell</text>
+      <text class="m-time" x="430" y="331">Under 10 min</text>
+      <circle class="m-dot" cx="425" cy="222" r="5"/>
+      <text class="m-name" x="415" y="218" text-anchor="end">Downtown</text>
+      <text class="m-time" x="415" y="231" text-anchor="end">Under 10 min</text>
+      <circle class="m-dot" cx="370" cy="150" r="5"/>
+      <text class="m-name" x="380" y="146">Wynwood</text>
+      <text class="m-time" x="380" y="159">Under 10 min</text>
+      <circle class="m-dot" cx="150" cy="392" r="5"/>
+      <text class="m-name" x="140" y="413" text-anchor="end">Coral Gables</text>
+      <text class="m-time" x="140" y="426" text-anchor="end">Under 10 min</text>
+      <circle class="m-dot" cx="345" cy="442" r="5"/>
+      <text class="m-name" x="355" y="447">Coconut Grove</text>
+      <text class="m-time" x="355" y="460">Close by</text>
+      <circle class="m-dot" cx="88" cy="190" r="5"/>
+      <text class="m-name" x="98" y="186">Airport (MIA)</text>
+      <text class="m-time" x="98" y="199">About 15 min</text>
+      <circle class="m-dot" cx="571" cy="250" r="5"/>
+      <text class="m-name" x="560" y="246" text-anchor="end">South Beach</text>
+      <text class="m-time" x="560" y="259" text-anchor="end">About 20 min</text>
+      <circle cx="280" cy="290" r="17" fill="none" stroke="#9A4527" stroke-width="1"/>
+      <circle cx="280" cy="290" r="8" fill="#9A4527"/>
+      <text class="m-home" x="300" y="284">Casa Ocho</text>
+      <g transform="translate(40 52)" fill="none" stroke="#1F3A2E" stroke-opacity=".6"><circle r="16"/><path d="M0-12 4 2 0 0-4 2z" fill="#1F3A2E" fill-opacity=".6"/></g>
+      <text x="40" y="30" text-anchor="middle" class="m-time">N</text>
+    </svg>
+    <figcaption>Stylized map, not to scale. Drive times are approximate. The exact address is shared after booking.</figcaption>
+  </figure>
+</section>
+
+<section class="sec paper rev g" id="reviews" aria-labelledby="revTitle">
+  <div class="rev-score rv">
+    <p class="lbl" id="revTitle">Guest reviews</p>
+    <p class="score"><b>4.99</b><span>out of 5<br>106 reviews</span></p>
+    <ul class="badges"><li>Guest favorite</li><li>Top 5% of homes</li><li>Superhost</li></ul>
+    <dl class="cats">
+      <div><dt>Cleanliness</dt><dd>5.0</dd><span class="bar"><i style="width:100%"></i></span></div>
+      <div><dt>Accuracy</dt><dd>5.0</dd><span class="bar"><i style="width:100%"></i></span></div>
+      <div><dt>Check-in</dt><dd>5.0</dd><span class="bar"><i style="width:100%"></i></span></div>
+      <div><dt>Communication</dt><dd>5.0</dd><span class="bar"><i style="width:100%"></i></span></div>
+      <div><dt>Location</dt><dd>4.9</dd><span class="bar"><i style="width:98%"></i></span></div>
+      <div><dt>Value</dt><dd>4.9</dd><span class="bar"><i style="width:98%"></i></span></div>
+    </dl>
+  </div>
+  <div class="quotes rv" aria-roledescription="carousel" aria-label="Sample guest quotes">
+    <span class="q-mark" aria-hidden="true">&ldquo;</span>
+    <div id="qSlides" aria-live="polite">
+      <figure class="q-slide" aria-roledescription="slide" aria-label="1 of 3">
+        <blockquote>The photos undersell it. Spotless, quiet, and the backyard is where we ended up every single evening.</blockquote>
+        <figcaption>[Guest name] · [Month Year]</figcaption>
+      </figure>
+      <figure class="q-slide" aria-roledescription="slide" aria-label="2 of 3">
+        <blockquote>We walked to Calle Ocho for coffee each morning and drove to Brickell for dinner in ten minutes. Parking was easy, everything was easy.</blockquote>
+        <figcaption>[Guest name] · [Month Year]</figcaption>
+      </figure>
+      <figure class="q-slide" aria-roledescription="slide" aria-label="3 of 3">
+        <blockquote>Alex answered every message right away. Comfortable beds, a kitchen with everything, and a shower we still talk about.</blockquote>
+        <figcaption>[Guest name] · [Month Year]</figcaption>
+      </figure>
+    </div>
+    <div class="q-ctrl">
+      <button type="button" id="qPrev" aria-label="Previous quote"><svg aria-hidden="true"><use href="#i-left"/></svg></button>
+      <button type="button" id="qNext" aria-label="Next quote"><svg aria-hidden="true"><use href="#i-right"/></svg></button>
+      <span class="q-count" id="qCount">1 of 3</span>
+    </div>
+    <p class="q-note">Sample quotes: real guest reviews go here.</p>
+  </div>
+</section>
+
+<section class="sec host g" id="host" aria-labelledby="hostTitle">
+  <div class="host-mono rv" aria-hidden="true"><span>A</span></div>
+  <div class="host-copy rv">
+    <p class="lbl">Meet your host</p>
+    <h2 class="h2" id="hostTitle" style="margin-top:18px">Your host, <em>Alex</em></h2>
+    <p class="lede">Alex is a Miami-based Superhost who has welcomed guests for four years. Questions before you book, a late flight, a dinner recommendation for Saturday: send a message any time, and Alex usually replies within an hour.</p>
+    <ul class="host-stats">
+      <li><b>Superhost</b><span>On Airbnb</span></li>
+      <li><b>4 years</b><span>Hosting</span></li>
+      <li><b>100%</b><span>Response rate</span></li>
+      <li><b>Within an hour</b><span>Typical reply</span></li>
+      <li><b>Miami</b><span>Lives locally</span></li>
+      <li><b>4.99</b><span>From 106 reviews</span></li>
+    </ul>
+    <a class="btn" href="#contact">Message Alex</a>
+  </div>
+</section>
+
+<section class="sec know g" id="know" aria-labelledby="knowTitle">
+  <div class="know-head rv">
+    <p class="lbl">Good to know</p>
+    <h2 class="h2" id="knowTitle" style="margin-top:18px">Before you <em>arrive.</em></h2>
+  </div>
+  <div class="know-a rv">
+    <h3>The stay</h3>
+    <dl class="kv">
+      <div><dt>Check-in</dt><dd>[3:00 PM]</dd></div>
+      <div><dt>Check-out</dt><dd>[11:00 AM]</dd></div>
+      <div><dt>Arrival</dt><dd>[Self check-in method]</dd></div>
+      <div><dt>Address</dt><dd>Shared after booking</dd></div>
+      <div><dt>Parking</dt><dd>1 driveway spot, free street parking</dd></div>
+    </dl>
+    <h3>House rules</h3>
+    <dl class="kv">
+      <div><dt>Guests</dt><dd>Up to 6</dd></div>
+      <div><dt>Parties and events</dt><dd>[Rule]</dd></div>
+      <div><dt>Smoking</dt><dd>[Rule]</dd></div>
+      <div><dt>Pets</dt><dd>[Rule]</dd></div>
+      <div><dt>Quiet hours</dt><dd>[Hours]</dd></div>
+    </dl>
+  </div>
+  <div class="faq rv">
+    <h3>Questions</h3>
+    <details>
+      <summary>Why book direct?</summary>
+      <p>Same house, same host, without the Airbnb guest service fee of about 14%. You also deal with Alex directly from your first message to checkout.</p>
+    </details>
+    <details>
+      <summary>How does payment work?</summary>
+      <p>[Payment details: accepted methods, deposit and when the balance is charged.]</p>
+    </details>
+    <details>
+      <summary>What is the cancellation policy?</summary>
+      <p>[Cancellation policy.]</p>
+    </details>
+    <details>
+      <summary>Where do I park?</summary>
+      <p>There is one private parking spot in the driveway and free street parking nearby. The guest entrance and parking are accessible, and there is a disabled parking spot.</p>
+    </details>
+    <details>
+      <summary>Can I check in early?</summary>
+      <p>Ask when you book and Alex will confirm what is possible for your dates. [Early check-in policy.]</p>
+    </details>
+  </div>
+</section>
+</main>
+
+<footer class="foot" id="contact">
+  <div class="shade" aria-hidden="true">
+    <span class="frond" style="width:720px;right:-200px;top:-140px;--r:160deg;opacity:.3;color:#000"><svg><use href="#frond"/></svg></span>
+  </div>
+  <div class="g" style="position:relative;z-index:4">
+    <div>
+      <p class="foot-brand">Casa <em>Ocho</em></p>
+      <p>A private house in Little Havana, Miami. The exact address is shared after booking.</p>
+      <div class="foot-cols">
+        <div><p class="lbl">Contact</p><p>[email]<br>[phone]</p></div>
+        <div><p class="lbl">Book</p><p><button class="btn-line" type="button" data-book="dates" aria-controls="bkPanel" aria-expanded="false" style="color:var(--linen)">Check availability</button></p></div>
+        <div><p class="lbl">Rates</p><p>Sample rates shown for this preview: $185 Sunday to Thursday, $225 Friday and Saturday, $95 cleaning, 13% taxes.</p></div>
+      </div>
+      <div class="foot-base">
+        <span>Concept 4 of 4 · Palm House</span>
+        <a href="../">Back to all concepts</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Photo viewer" hidden>
+  <button class="lb-btn lb-close" type="button" id="lbClose" aria-label="Close photo viewer"><svg aria-hidden="true"><use href="#i-x"/></svg></button>
+  <button class="lb-btn lb-prev" type="button" id="lbPrev" aria-label="Previous photo"><svg aria-hidden="true"><use href="#i-left"/></svg></button>
+  <figure>
+    <img id="lbImg" src="" alt="">
+    <figcaption id="lbCap"></figcaption>
+  </figure>
+  <button class="lb-btn lb-next" type="button" id="lbNext" aria-label="Next photo"><svg aria-hidden="true"><use href="#i-right"/></svg></button>
+</div>
+
+<script>
+(function(){
+  var doc=document.documentElement;
+  doc.classList.add('js');
+  var $=function(s){return document.querySelector(s)};
+  var $$=function(s){return Array.prototype.slice.call(document.querySelectorAll(s))};
+  var desk=window.matchMedia('(min-width: 900px)');
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)');
+
+  var MONTHS=['January','February','March','April','May','June','July','August','September','October','November','December'];
+  var MON=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  var DAYS=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+  var RATE_WEEK=185,RATE_WKND=225,CLEAN=95,TAX=0.13,AIRBNB_FEE=0.14;
+
+  var today=new Date();today.setHours(0,0,0,0);
+  function addDays(d,n){var x=new Date(d);x.setDate(x.getDate()+n);return x}
+  function key(d){return d.getFullYear()+'-'+d.getMonth()+'-'+d.getDate()}
+  function nights(a,b){return Math.round((b-a)/86400000)}
+  function money(n){return '$'+n.toLocaleString('en-US')}
+  function short(d){return MON[d.getMonth()]+' '+d.getDate()}
+  function longDate(d){return DAYS[d.getDay()]+', '+MONTHS[d.getMonth()]+' '+d.getDate()+', '+d.getFullYear()}
+  var booked={};
+  [3,4,9,10,11,18,25,26,27,39,40,46].forEach(function(n){booked[key(addDays(today,n))]=true});
+
+  var st={start:null,end:null,guests:2,view:new Date(today.getFullYear(),today.getMonth(),1),done:false};
+
+  var bk=$('#bk'),panel=$('#bkPanel'),scrim=$('#bkScrim'),months=$('#calMonths'),msg=$('#calMsg');
+  var openers=$$('[data-book]');
+
+  function rangeFree(a,b){for(var d=new Date(a);d<b;d=addDays(d,1)){if(booked[key(d)])return false}return true}
+
+  function quote(){
+    if(!st.start||!st.end)return null;
+    var wk=0,we=0;
+    for(var d=new Date(st.start);d<st.end;d=addDays(d,1)){var w=d.getDay();if(w===5||w===6)we++;else wk++}
+    var sub=wk*RATE_WEEK+we*RATE_WKND;
+    var tax=Math.round((sub+CLEAN)*TAX);
+    return {wk:wk,we:we,n:wk+we,sub:sub,tax:tax,total:sub+CLEAN+tax,save:Math.round((sub+CLEAN)*AIRBNB_FEE)};
+  }
+
+  function renderCal(){
+    var count=desk.matches?2:1;
+    months.innerHTML='';
+    for(var m=0;m<count;m++){
+      var first=new Date(st.view.getFullYear(),st.view.getMonth()+m,1);
+      var wrap=document.createElement('div');wrap.className='cal-month';
+      var title=document.createElement('p');title.className='cal-title';title.textContent=MONTHS[first.getMonth()]+' '+first.getFullYear();
+      var dow=document.createElement('div');dow.className='cal-dow';dow.setAttribute('aria-hidden','true');
+      dow.innerHTML='<span>S</span><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span>';
+      var grid=document.createElement('div');grid.className='cal-grid';grid.setAttribute('role','group');grid.setAttribute('aria-label',title.textContent);
+      for(var p=0;p<first.getDay();p++){grid.appendChild(document.createElement('span'))}
+      var dim=new Date(first.getFullYear(),first.getMonth()+1,0).getDate();
+      for(var i=1;i<=dim;i++){
+        var date=new Date(first.getFullYear(),first.getMonth(),i),t=date.getTime();
+        var b=document.createElement('button');b.type='button';b.className='cal-day';b.textContent=i;b.dataset.t=t;
+        var note='';
+        if(date<today){b.disabled=true;b.classList.add('is-past');note=', unavailable'}
+        else if(booked[key(date)]){b.disabled=true;b.classList.add('is-booked');note=', booked'}
+        if(t===today.getTime())b.classList.add('is-today');
+        var sel=false;
+        if(st.start&&t===st.start.getTime()){b.classList.add('is-start');if(st.end)b.classList.add('has-range');sel=true;note+=', check-in'}
+        if(st.end&&t===st.end.getTime()){b.classList.add('is-end');sel=true;note+=', check-out'}
+        if(st.start&&st.end&&t>st.start.getTime()&&t<st.end.getTime())b.classList.add('is-in');
+        b.setAttribute('aria-pressed',sel?'true':'false');
+        b.setAttribute('aria-label',longDate(date)+note);
+        grid.appendChild(b);
+      }
+      wrap.appendChild(title);wrap.appendChild(dow);wrap.appendChild(grid);months.appendChild(wrap);
+    }
+    var cur=new Date(today.getFullYear(),today.getMonth(),1);
+    $('#calPrev').disabled=st.view<=cur;
+    $('#calNext').disabled=st.view>=new Date(today.getFullYear(),today.getMonth()+11,1);
+  }
+
+  function update(){
+    var q=quote();
+    var gl=st.guests+(st.guests===1?' guest':' guests');
+    $('#bkGuestsVal').textContent=gl;
+    $('#gCount').textContent=st.guests;
+    $('#gMinus').disabled=st.guests<=1;
+    $('#gPlus').disabled=st.guests>=6;
+    var dates='Add your dates';
+    if(st.start&&st.end)dates=short(st.start)+' to '+short(st.end);
+    else if(st.start)dates=short(st.start)+' to ...';
+    $('#bkDatesVal').textContent=dates;
+    $('#bkRateVal').textContent=q?money(q.total)+' total':'From $185 a night';
+    $('#bkMobVal').textContent=q?short(st.start)+' to '+short(st.end)+' · '+money(q.total):'From $185 a night';
+    var sub=$('#bkSub');
+    if(q)sub.textContent=q.n+' nights · '+short(st.start)+' to '+short(st.end)+' · '+gl;
+    else if(st.start)sub.textContent='Check-in '+short(st.start)+'. Now select your check-out date.';
+    else sub.textContent='Select your check-in date';
+    var bd=$('#bkBreak'),save=$('#bkSave');
+    if(q){
+      var h='';
+      if(q.wk)h+='<div class="bd-row"><span>'+money(RATE_WEEK)+' × '+q.wk+(q.wk===1?' weeknight':' weeknights')+'</span><span>'+money(q.wk*RATE_WEEK)+'</span></div>';
+      if(q.we)h+='<div class="bd-row"><span>'+money(RATE_WKND)+' × '+q.we+(q.we===1?' Fri or Sat night':' Fri and Sat nights')+'</span><span>'+money(q.we*RATE_WKND)+'</span></div>';
+      h+='<div class="bd-row"><span>Cleaning fee</span><span>'+money(CLEAN)+'</span></div>';
+      h+='<div class="bd-row"><span>Taxes (13%)</span><span>'+money(q.tax)+'</span></div>';
+      h+='<div class="bd-row total"><span>Total</span><span>'+money(q.total)+'</span></div>';
+      bd.innerHTML=h;
+      save.innerHTML='<strong>Book direct and save '+money(q.save)+'</strong>Compared with the same stay on Airbnb, which adds a guest service fee of about 14%.';
+      save.hidden=false;
+    }else{
+      bd.innerHTML='<p class="bd-empty">Choose your dates to see the full price. Sunday to Thursday nights are $185, Friday and Saturday nights $225.</p>';
+      save.hidden=true;
+    }
+    $('#bkRequest').disabled=!q;
+    if(!panel.hidden)renderCal();
+  }
+
+  months.addEventListener('click',function(e){
+    var b=e.target.closest('.cal-day');
+    if(!b||b.disabled)return;
+    var d=new Date(Number(b.dataset.t));
+    msg.textContent='';
+    if(!st.start||st.end||d<=st.start){st.start=d;st.end=null}
+    else if(!rangeFree(st.start,d)){msg.textContent='Those dates include a booked night. Your new check-in is '+short(d)+'.';st.start=d;st.end=null}
+    else if(nights(st.start,d)<2){msg.textContent='There is a 2 night minimum. Pick a check-out at least two nights after check-in.'}
+    else st.end=d;
+    update();
+    var again=months.querySelector('[data-t="'+d.getTime()+'"]');
+    if(again)again.focus();
+  });
+  months.addEventListener('mouseover',function(e){
+    var b=e.target.closest('.cal-day');
+    if(!b||!st.start||st.end)return;
+    var h=Number(b.dataset.t),s=st.start.getTime();
+    $$('#calMonths .cal-day').forEach(function(x){var t=Number(x.dataset.t);x.classList.toggle('is-preview',!b.disabled&&t>s&&t<h)});
+  });
+  months.addEventListener('mouseleave',function(){$$('#calMonths .is-preview').forEach(function(x){x.classList.remove('is-preview')})});
+
+  $('#calPrev').addEventListener('click',function(){st.view=new Date(st.view.getFullYear(),st.view.getMonth()-1,1);renderCal()});
+  $('#calNext').addEventListener('click',function(){st.view=new Date(st.view.getFullYear(),st.view.getMonth()+1,1);renderCal()});
+  $('#gMinus').addEventListener('click',function(){if(st.guests>1){st.guests--;update()}});
+  $('#gPlus').addEventListener('click',function(){if(st.guests<6){st.guests++;update()}});
+
+  $('#bkRequest').addEventListener('click',function(){
+    var q=quote();if(!q)return;
+    $('#doneSum').textContent=short(st.start)+' to '+short(st.end)+' · '+q.n+' nights · '+st.guests+(st.guests===1?' guest':' guests')+' · '+money(q.total)+' total';
+    $('#bkForm').hidden=true;$('#bkDone').hidden=false;
+    $('#bkSub').textContent='Preview only';
+    $('#doneTitle').focus();
+  });
+  $('#doneBack').addEventListener('click',function(){$('#bkDone').hidden=true;$('#bkForm').hidden=false;update();$('#bkTitle').focus()});
+
+  var lastOpener=null;
+  function setExpanded(v){openers.forEach(function(o){o.setAttribute('aria-expanded',v?'true':'false')})}
+  function openPanel(opener,focusGuests){
+    lastOpener=opener||null;
+    panel.hidden=false;
+    if(!desk.matches){scrim.hidden=false;doc.classList.add('lock')}
+    setExpanded(true);
+    renderCal();
+    if(desk.matches&&!bk.classList.contains('stuck')){
+      var r=bk.getBoundingClientRect(),need=panel.offsetHeight+30;
+      if(r.top<need)window.scrollBy({top:r.top-need,behavior:reduce.matches?'auto':'smooth'});
+    }
+    requestAnimationFrame(function(){(focusGuests?$('#gPlus'):$('#bkTitle')).focus({preventScroll:true})});
+  }
+  function closePanel(restore){
+    if(panel.hidden)return;
+    panel.hidden=true;scrim.hidden=true;doc.classList.remove('lock');
+    setExpanded(false);
+    if(restore&&lastOpener&&document.contains(lastOpener))lastOpener.focus({preventScroll:true});
+  }
+  openers.forEach(function(o){
+    o.addEventListener('click',function(e){
+      e.stopPropagation();
+      if(!panel.hidden&&bk.contains(o)&&o.classList.contains('bk-cta')){closePanel(true);return}
+      openPanel(o,o.dataset.book==='guests');
+    });
+  });
+  $('#bkClose').addEventListener('click',function(){closePanel(true)});
+  scrim.addEventListener('click',function(){closePanel(true)});
+  document.addEventListener('click',function(e){
+    if(panel.hidden)return;
+    var path=e.composedPath?e.composedPath():[];
+    if(path.indexOf(panel)>-1||path.indexOf(bk)>-1)return;
+    closePanel(false);
+  });
+  desk.addEventListener('change',function(){
+    if(!panel.hidden){
+      if(desk.matches){scrim.hidden=true;doc.classList.remove('lock')}
+      else{scrim.hidden=false;doc.classList.add('lock')}
+      renderCal();
+    }
+  });
+
+  var wrap=$('#bkWrap');
+  function sizeWrap(){
+    if(!desk.matches)wrap.style.minHeight='';
+    else if(!bk.classList.contains('stuck'))wrap.style.minHeight=bk.offsetHeight+'px';
+  }
+  sizeWrap();
+  window.addEventListener('resize',sizeWrap);
+  if(document.fonts&&document.fonts.ready)document.fonts.ready.then(sizeWrap);
+  if('IntersectionObserver' in window){
+    new IntersectionObserver(function(entries){
+      entries.forEach(function(en){bk.classList.toggle('stuck',!en.isIntersecting&&en.boundingClientRect.top<0)});
+    }).observe(wrap);
+  }
+
+  /* lightbox */
+  var photos=[
+    {src:'../assets/img/photo-1.jpg',alt:'Living room with a cognac leather sofa and the open kitchen behind',cap:'The living room'},
+    {src:'../assets/img/photo-2.jpg',alt:'White shaker kitchen with a large island and globe pendants',cap:'The kitchen'},
+    {src:'../assets/img/photo-3.jpg',alt:'Private backyard with a dining table for six, umbrella, grill and string lights',cap:'The garden'},
+    {src:'../assets/img/photo-4.jpg',alt:'Bedroom 1 with a queen bed, rust velvet curtains and rattan lamps',cap:'Bedroom 1, one queen bed'},
+    {src:'../assets/img/photo-5.jpg',alt:'Bathroom with a walk-in glass shower, black fixtures and wood shelves',cap:'The bath'},
+    {src:'../assets/img/photo-6.jpg',alt:'Bedroom 2 with two double beds, coral pillows and a Miami travel poster',cap:'Bedroom 2, two double beds'}
+  ];
+  var lb=$('#lb'),lbImg=$('#lbImg'),lbCap=$('#lbCap'),lbIdx=0,lbReturn=null;
+  function showPhoto(i){
+    lbIdx=(i+photos.length)%photos.length;
+    var p=photos[lbIdx];
+    lbImg.src=p.src;lbImg.alt=p.alt;
+    lbCap.innerHTML='<span>'+(lbIdx+1)+' / '+photos.length+'</span>'+p.cap;
+  }
+  function openLb(i,from){lbReturn=from;showPhoto(i);lb.hidden=false;doc.classList.add('lock');$('#lbClose').focus()}
+  function closeLb(){lb.hidden=true;if(panel.hidden||desk.matches)doc.classList.remove('lock');if(lbReturn)lbReturn.focus({preventScroll:true})}
+  $$('[data-lb]').forEach(function(b){b.addEventListener('click',function(){openLb(Number(b.dataset.lb),b)})});
+  $('#lbClose').addEventListener('click',closeLb);
+  $('#lbPrev').addEventListener('click',function(){showPhoto(lbIdx-1)});
+  $('#lbNext').addEventListener('click',function(){showPhoto(lbIdx+1)});
+  lb.addEventListener('click',function(e){if(e.target===lb)closeLb()});
+
+  document.addEventListener('keydown',function(e){
+    if(!lb.hidden){
+      if(e.key==='Escape'){e.preventDefault();closeLb()}
+      else if(e.key==='ArrowLeft')showPhoto(lbIdx-1);
+      else if(e.key==='ArrowRight')showPhoto(lbIdx+1);
+      else if(e.key==='Tab'){
+        var f=[$('#lbClose'),$('#lbPrev'),$('#lbNext')],i=f.indexOf(document.activeElement);
+        e.preventDefault();
+        f[(i+(e.shiftKey?-1:1)+f.length)%f.length].focus();
+      }
+      return;
+    }
+    if(e.key==='Escape'&&!panel.hidden)closePanel(true);
+  });
+
+  /* quotes */
+  var slides=$$('.q-slide'),qi=0;
+  function showQuote(i){
+    qi=(i+slides.length)%slides.length;
+    slides.forEach(function(s,n){s.hidden=n!==qi;s.classList.remove('enter')});
+    void slides[qi].offsetWidth;
+    slides[qi].classList.add('enter');
+    $('#qCount').textContent=(qi+1)+' of '+slides.length;
+  }
+  $('#qPrev').addEventListener('click',function(){showQuote(qi-1)});
+  $('#qNext').addEventListener('click',function(){showQuote(qi+1)});
+  slides.forEach(function(s,n){s.hidden=n!==0});
+
+  /* reveal */
+  var rv=$$('.rv');
+  if(!reduce.matches&&'IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target)}});
+    },{rootMargin:'0px 0px -8% 0px'});
+    rv.forEach(function(el){io.observe(el)});
+  }else rv.forEach(function(el){el.classList.add('in')});
+
+  update();
+})();
+</script>
+</body>
+</html>
